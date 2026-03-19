@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zuoming Niu | Personal Website</title>
+  <meta name="description" content="Zuoming Niu (Nick) — undergraduate student in computer science, integrated circuits, AI systems, security, and technical storytelling." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">Zuoming Niu</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#strengths">Strengths</a>
+        <a href="#projects">Projects</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Nick · Zuoming Niu</p>
+        <h1>Building systems with engineering rigor and presenting them with clarity.</h1>
+        <p class="hero-text">
+          I am an undergraduate student at Xi’an Jiaotong University, with interests across AI systems,
+          security, integrated circuit design, and technical problem solving. I enjoy projects that combine
+          deep analytical work with clear communication and visual storytelling.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="assets/cv.pdf" target="_blank" rel="noopener">View CV</a>
+          <a class="btn btn-secondary" href="#projects">Selected Work</a>
+        </div>
+        <ul class="hero-tags">
+          <li>AI Systems</li>
+          <li>Federated Learning Security</li>
+          <li>VLSI Design</li>
+          <li>Technical Storytelling</li>
+        </ul>
+      </div>
+
+      <div class="hero-card">
+        <img src="assets/avatar-placeholder.svg" alt="Zuoming Niu avatar placeholder" class="avatar">
+        <div class="mini-panel">
+          <p class="mini-title">Current Focus</p>
+          <p>Cross-disciplinary work spanning computer systems, privacy/security, and chip design.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container two-col">
+      <div>
+        <p class="section-label">About</p>
+        <h2>A profile that should feel more than a résumé.</h2>
+      </div>
+      <div class="card prose">
+        <p>
+          I am pursuing a B.S. in Computer Science and Technology (Special Class for Integrated Circuits)
+          at Xi’an Jiaotong University. My academic training sits at the intersection of computing and hardware,
+          while my project experience ranges from federated learning privacy research to full-custom CMOS design.
+        </p>
+        <p>
+          What distinguishes me is not only technical breadth, but also the ability to organize work, lead teams,
+          and explain complex ideas with structure. Alongside engineering projects, I have directed large student media
+          productions and managed communication at scale, which shaped a working style that is both disciplined and expressive.
+        </p>
+      </div>
+    </section>
+
+    <section id="strengths" class="section container">
+      <p class="section-label">Strengths</p>
+      <h2>What I want this website to communicate.</h2>
+      <div class="grid-3">
+        <article class="card strength-card">
+          <h3>Technical Depth</h3>
+          <p>
+            Comfortable moving from concepts to implementation, especially in security, data analysis,
+            and circuit-level design workflows.
+          </p>
+        </article>
+        <article class="card strength-card">
+          <h3>Leadership</h3>
+          <p>
+            Experience coordinating teams, managing deadlines, and turning complex tasks into executable plans.
+          </p>
+        </article>
+        <article class="card strength-card">
+          <h3>Communication</h3>
+          <p>
+            Strong interest in presenting technical work clearly, visually, and persuasively rather than merely documenting it.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Selected Work</p>
+          <h2>Projects that represent my current trajectory.</h2>
+        </div>
+      </div>
+
+      <div class="project-list">
+        <article class="card project-card">
+          <div class="project-top">
+            <span class="project-kicker">Security Research · Team Lead</span>
+            <span class="project-date">May 2025 – Jul. 2025</span>
+          </div>
+          <h3>FL Breaker: Security Weakness of Federated Learning</h3>
+          <p>
+            Reproduced DLG-style privacy attacks on federated learning, evaluated reconstruction quality,
+            analyzed the optimization bottlenecks of gradient inversion, and compared defense paths including
+            homomorphic encryption, secure multi-party computation, and differential privacy.
+          </p>
+          <ul>
+            <li>Worked in a 5-member NUS workshop team on privacy vulnerabilities in federated learning.</li>
+            <li>Built live loss-curve visualizations to show private image reconstruction from random initialization.</li>
+            <li>Co-authored the final survey deliverable that received Third Prize.</li>
+          </ul>
+        </article>
+
+        <article class="card project-card">
+          <div class="project-top">
+            <span class="project-kicker">Integrated Circuits · Lab Member</span>
+            <span class="project-date">Oct. 2024 – Dec. 2024</span>
+          </div>
+          <h3>Full-Custom SN74HC259 in 0.18 μm CMOS</h3>
+          <p>
+            Participated in the complete circuit-to-layout flow of an 8-bit addressable latch,
+            including schematic design, pre-layout simulation, layout implementation,
+            post-layout extraction, and timing/power verification in Cadence Virtuoso and Spectre.
+          </p>
+          <ul>
+            <li>Contributed to D-latch, inverter, NAND/NOR, buffer, and I/O cell schematic design.</li>
+            <li>Completed partial custom layout under area and design-rule constraints.</li>
+            <li>Verified DRC/LVS cleanliness and confirmed design targets in post-layout simulation.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="leadership" class="section container two-col-alt">
+      <div class="card highlight-card">
+        <p class="section-label">Leadership & Style</p>
+        <h2>Engineering on one side, media instinct on the other.</h2>
+        <p>
+          Beyond coursework and lab work, I served as Station Director of the Xi’an Jiaotong University Student TV Station,
+          leading an 80+ member team and participating in large-scale campus event production. This experience strengthened my
+          ability to manage people, shape narratives, and think about audience-facing presentation.
+        </p>
+        <p>
+          That is also the style of this homepage: professional first, but not flat; structured, but not lifeless.
+        </p>
+      </div>
+      <div class="card metrics-card">
+        <div class="metric">
+          <span class="metric-value">80+</span>
+          <span class="metric-label">student team members coordinated</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">1.3M</span>
+          <span class="metric-label">followers on the official campus TikTok account</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">40+</span>
+          <span class="metric-label">videos and visual posts produced in one year</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="section container">
+      <p class="section-label">Awards & Credentials</p>
+      <h2>Signals of consistency.</h2>
+      <div class="card award-card">
+        <div class="chips">
+          <span>First-class Scholarship</span>
+          <span>Excellent Student</span>
+          <span>MCM Honorable Mention</span>
+          <span>Outstanding Student Journalist</span>
+          <span>TOEFL 103</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container contact-section">
+      <p class="section-label">Contact</p>
+      <h2>Get in touch.</h2>
+      <div class="card contact-card">
+        <p><strong>Name:</strong> Zuoming Niu (Nick)</p>
+        <p><strong>Email:</strong> <a href="mailto:zuomingniu@gmail.com">zuomingniu@gmail.com</a></p>
+        <p><strong>Location:</strong> Xi’an, Shaanxi, China</p>
+        <p><strong>GitHub:</strong> <span class="muted">replace with your GitHub profile link</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Zuoming Niu. Built with GitHub Pages.</p>
+      <p class="muted">Last updated in March 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>
