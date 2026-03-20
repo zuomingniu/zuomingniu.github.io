@@ -1,14 +1,11 @@
 :root {
   --bg: #fbf7f3;
   --bg-deep: #f3ede8;
-  --surface: rgba(255, 255, 255, 0.62);
-  --surface-strong: rgba(255, 255, 255, 0.8);
-  --line: rgba(117, 103, 126, 0.12);
   --text: #29232f;
   --muted: #6d6675;
   --accent: #ea7f9f;
-  --accent-soft: #74b7ff;
-  --shadow: 0 24px 60px rgba(162, 149, 167, 0.16);
+  --line: rgba(117, 103, 126, 0.12);
+  --shadow: 0 22px 56px rgba(162, 149, 167, 0.14);
 }
 
 * {
@@ -22,9 +19,9 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Noto Sans SC", "Manrope", "Segoe UI", sans-serif;
+  font-family: "Manrope", "Noto Sans SC", "Segoe UI", sans-serif;
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.72;
   background:
     radial-gradient(circle at 12% 10%, rgba(255, 201, 214, 0.9), transparent 24%),
     radial-gradient(circle at 85% 14%, rgba(180, 226, 255, 0.82), transparent 23%),
@@ -40,6 +37,10 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+button {
+  font: inherit;
 }
 
 .container {
@@ -89,8 +90,8 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
-  padding: 16px 0;
+  gap: 22px;
+  padding: 10px 0;
 }
 
 .brand {
@@ -100,59 +101,59 @@ img {
 }
 
 .brand-logo {
-  width: 124px;
+  width: 172px;
   height: auto;
   object-fit: contain;
-  border-radius: 0;
-  box-shadow: none;
+}
+
+.nav-tools {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 16px;
 }
 
 .nav a {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
   color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.1;
+  font-size: 0.94rem;
+  font-weight: 700;
   transition: color 0.2s ease;
 }
 
-.nav a span {
-  font-family: "Manrope", "Noto Sans SC", sans-serif;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.nav a strong {
-  font-size: 0.96rem;
-  font-weight: 700;
-}
-
 .nav a:hover,
-.contact-links a:hover {
+.contact-links a:hover,
+.lang-toggle:hover {
   color: var(--text);
+}
+
+.lang-toggle {
+  min-width: 54px;
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--muted);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(162, 149, 167, 0.1);
 }
 
 .hero {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.18fr 0.82fr;
   gap: 24px;
   align-items: center;
-  padding: 72px 0 28px;
+  padding: 64px 0 24px;
 }
 
 .glass-card {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.52));
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 28px;
   box-shadow: var(--shadow);
@@ -163,14 +164,14 @@ img {
 .hero-panel,
 .section-card,
 .contact-card {
-  padding: 30px;
+  padding: 28px;
 }
 
 .eyebrow,
 .section-label {
   margin: 0 0 12px;
   color: var(--accent);
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -180,11 +181,11 @@ img {
 .section-card h2,
 .contact-card h2 {
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.08;
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 3.1rem);
 }
 
 .hero h1 span,
@@ -192,25 +193,24 @@ img {
 .contact-card h2 span {
   display: block;
   margin-top: 10px;
-  font-family: "Manrope", "Noto Sans SC", sans-serif;
-  font-size: 0.44em;
+  font-size: 0.45em;
   color: var(--muted);
   letter-spacing: 0.04em;
-}
-
-.section-card p,
-.contact-links,
-.footer-inner {
-  color: var(--muted);
 }
 
 .hero-prose {
   margin-top: 20px;
 }
 
+.hero-prose p,
+.section-card p,
+.contact-links,
+.footer-inner {
+  color: var(--muted);
+}
+
 .hero-prose p {
   margin: 0;
-  color: var(--muted);
   font-size: 1rem;
 }
 
@@ -222,11 +222,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100%;
 }
 
 .avatar {
-  width: min(100%, 190px);
+  width: min(100%, 188px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 22px;
@@ -235,7 +234,7 @@ img {
 }
 
 .section {
-  padding: 28px 0;
+  padding: 26px 0;
 }
 
 .contact-card {
@@ -249,12 +248,11 @@ img {
   display: grid;
   gap: 10px;
   justify-items: start;
-  font-family: "Manrope", "Noto Sans SC", sans-serif;
   font-weight: 700;
 }
 
 .site-footer {
-  padding: 26px 0 40px;
+  padding: 24px 0 36px;
 }
 
 .footer-inner {
@@ -270,6 +268,10 @@ img {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .brand-logo {
+    width: 148px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -277,13 +279,19 @@ img {
     width: min(100% - 24px, 1040px);
   }
 
-  .nav-wrap {
+  .nav-wrap,
+  .nav-tools {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  .nav-wrap {
+    gap: 14px;
+    padding: 12px 0;
+  }
+
   .hero {
-    padding-top: 44px;
+    padding-top: 42px;
   }
 
   .hero-copy,
@@ -295,6 +303,6 @@ img {
   }
 
   .brand-logo {
-    width: 104px;
+    width: 132px;
   }
 }
