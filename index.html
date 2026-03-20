@@ -23,9 +23,8 @@
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#top">
+      <a class="brand" href="#top" aria-label="Back to top">
         <img class="brand-logo" src="assets/logo-mark.png" alt="Zuoming Niu logo" />
-        <span>牛作铭</span>
       </a>
       <nav class="nav">
         <a href="#about"><span>About</span><strong>关于</strong></a>
@@ -37,48 +36,35 @@
   </header>
 
   <main id="top">
-    <section class="hero container">
+    <section id="about" class="hero container">
       <div class="hero-copy glass-card">
         <p class="eyebrow">个人主页 | Personal Website</p>
         <h1>牛作铭 <span>Zuoming Niu</span></h1>
+        <div class="hero-prose">
+          <p>
+            我目前就读于西安交通大学计算机科学与技术（集成电路专项班），预计于 2026 年完成本科学习。
+            I am currently an undergraduate student in Computer Science and Technology
+            (Special Class for Integrated Circuits) at Xi'an Jiaotong University, and
+            expect to graduate in 2026.
+          </p>
+          <p>
+            2025 年 5 月至 7 月，我参加了新加坡国立大学 School of Computing Workshop，
+            并围绕联邦学习安全完成论文《FL Breaker: Demonstrating Security Weaknesses of Federated Learning》。
+            From May to July 2025, I joined the NUS School of Computing Workshop and
+            worked on federated learning security, contributing to the paper
+            "FL Breaker: Demonstrating Security Weaknesses of Federated Learning."
+          </p>
+          <p>
+            除了学术训练之外，我也持续关注金融与摄影。
+            Finance keeps me attentive to markets and information, while photography
+            is the way I observe light, places, and everyday details.
+          </p>
+        </div>
       </div>
 
       <aside class="hero-panel glass-card">
         <img src="assets/头像.png" alt="牛作铭头像" class="avatar" />
       </aside>
-    </section>
-
-    <section id="about" class="section container">
-      <article class="glass-card section-card">
-        <p class="section-label">About</p>
-        <h2>关于我 <span>About</span></h2>
-        <div class="timeline">
-          <section class="timeline-item">
-            <div class="timeline-date">2022.09 - 2026.06</div>
-            <div class="timeline-body">
-              <h3>西安交通大学 | Xi'an Jiaotong University</h3>
-              <p>
-                计算机科学与技术（集成电路专项班）本科。<br />
-                B.S. in Computer Science and Technology (Special Class for Integrated Circuits).
-              </p>
-            </div>
-          </section>
-
-          <section class="timeline-item">
-            <div class="timeline-date">2025.05 - 2025.07</div>
-            <div class="timeline-body">
-              <h3>新加坡国立大学 | National University of Singapore</h3>
-              <p class="item-subtitle">
-                计算机学院 Workshop<br />
-                School of Computing Workshop
-              </p>
-              <p>
-                <a class="inline-link" href="assets/papers/FL-Breaker-Demonstrating-Security-Weaknesses-of-Federated-Learning.pdf" target="_blank" rel="noopener">FL Breaker: Demonstrating Security Weaknesses of Federated Learning</a>
-              </p>
-            </div>
-          </section>
-        </div>
-      </article>
     </section>
 
     <section id="finance" class="section container">
@@ -111,6 +97,7 @@
         </div>
         <div class="contact-links">
           <a href="mailto:Niuzuoming@outlook.com">Niuzuoming@outlook.com</a>
+          <a href="https://www.linkedin.com/in/zuomingniu" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </article>
     </section>
