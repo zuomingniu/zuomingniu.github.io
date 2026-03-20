@@ -203,7 +203,7 @@
         about_p2: "From May to July 2025, I joined the NUS School of Computing Workshop and worked on federated learning security. During the workshop, I contributed to the paper \"FL Breaker: Demonstrating Security Weaknesses of Federated Learning.\"",
         about_p3: "Beyond formal coursework, I keep a steady interest in finance and photography. Finance keeps me attentive to markets and information, while photography gives me a way to observe light, places, and everyday details with patience.",
         finance_title: "Finance",
-        finance_body: "An interactive record of return curves and transaction notes. I will replace the placeholder trades with my actual execution details later.",
+        finance_body: "An interactive record of return curves and selected trades from my brokerage statement. Hover over the chart to inspect key buy and sell activity by date.",
         chart_title: "Two-Year Return Comparison",
         chart_link: "My holdings",
         legend_index: "CSI 300",
@@ -234,7 +234,7 @@
         about_p2: "2025 年 5 月至 7 月，我参加了新加坡国立大学 School of Computing Workshop，并围绕联邦学习安全开展研究。在这一阶段，我参与了论文《FL Breaker: Demonstrating Security Weaknesses of Federated Learning》的写作。",
         about_p3: "除了正式的学术训练之外，我也持续关注金融与摄影。金融让我保持对市场与信息的敏感，摄影则让我用更耐心的方式观察光线、场景与日常细节。",
         finance_title: "金融",
-        finance_body: "这里先放一版收益曲线与成交记录的交互图表，之后我会把占位交易数据替换成真实成交明细。",
+        finance_body: "这里展示收益曲线与从对账单中筛选出的重点交易记录。鼠标悬停到图表上即可查看对应日期的重要买卖操作。",
         chart_title: "近两年收益对比",
         chart_link: "我的股票",
         legend_index: "沪深300",
@@ -258,28 +258,82 @@
 
     const chartData = [
       { date: "2024-03-20", index: -2, total: 0, stock: 1, trades: [] },
-      { date: "2024-04-15", index: 1, total: 0.5, stock: 8, trades: ["Buy placeholder stock A, 100 shares"] },
-      { date: "2024-05-03", index: 0.75, total: 0.36, stock: 8.79, trades: ["Initial mock position opened"] },
+      { date: "2024-04-15", index: 1, total: 0.5, stock: 8, trades: [
+        { zh: "2024-02-29 买入 中国银行 500股，均价 4.45", en: "2024-02-29 Bought Bank of China, 500 shares at 4.45" },
+        { zh: "2024-03-01 买入 中国核电 200股，均价 8.54", en: "2024-03-01 Bought China National Nuclear Power, 200 shares at 8.54" },
+        { zh: "2024-04-08 卖出 中国核电 200股，均价 9.48", en: "2024-04-08 Sold China National Nuclear Power, 200 shares at 9.48" }
+      ] },
+      { date: "2024-05-03", index: 0.75, total: 0.36, stock: 8.79, trades: [] },
       { date: "2024-06-09", index: -3, total: -4, stock: -6, trades: [] },
-      { date: "2024-07-12", index: -6, total: -12, stock: -18, trades: ["Sell placeholder stock B, 50 shares"] },
+      { date: "2024-07-12", index: -6, total: -12, stock: -18, trades: [
+        { zh: "2024-05-23 分两笔买入 恒生电子 共2800股，均价 21.15 / 21.01", en: "2024-05-23 Bought Hundsun Technologies in two fills, 2,800 shares total at 21.15 / 21.01" },
+        { zh: "2024-06-06 再买入 恒生电子 1600股，均价 19.50", en: "2024-06-06 Added Hundsun Technologies, 1,600 shares at 19.50" }
+      ] },
       { date: "2024-08-29", index: -10, total: -21, stock: -24, trades: [] },
-      { date: "2024-09-18", index: 10, total: 12, stock: 18, trades: ["Buy placeholder stock C, 200 shares"] },
+      { date: "2024-09-18", index: 10, total: 12, stock: 18, trades: [] },
       { date: "2024-10-12", index: 14, total: 36, stock: 40, trades: [] },
-      { date: "2024-11-18", index: 8, total: 33, stock: 37, trades: [] },
-      { date: "2024-12-20", index: 11, total: 47, stock: 50, trades: ["Add to placeholder stock A"] },
+      { date: "2024-11-18", index: 8, total: 33, stock: 37, trades: [
+        { zh: "2024-11-05 卖出 恒生电子 1400股，均价 29.15", en: "2024-11-05 Sold Hundsun Technologies, 1,400 shares at 29.15" },
+        { zh: "2024-11-05 卖出 恒生电子 3000股，均价 29.15", en: "2024-11-05 Sold Hundsun Technologies, 3,000 shares at 29.15" },
+        { zh: "2024-11-06 买入 立讯精密 1500股，均价 42.00", en: "2024-11-06 Bought Luxshare Precision, 1,500 shares at 42.00" },
+        { zh: "2024-11-22 再买入 立讯精密 1500股，均价 37.75", en: "2024-11-22 Added Luxshare Precision, 1,500 shares at 37.75" }
+      ] },
+      { date: "2024-12-20", index: 11, total: 47, stock: 50, trades: [
+        { zh: "2024-12-16 卖出 中国银行 500股，均价 5.28", en: "2024-12-16 Sold Bank of China, 500 shares at 5.28" }
+      ] },
       { date: "2025-02-07", index: 10, total: 52, stock: 61, trades: [] },
-      { date: "2025-03-10", index: 12, total: 44, stock: 45, trades: ["Trim placeholder stock C"] },
+      { date: "2025-03-10", index: 12, total: 44, stock: 45, trades: [] },
       { date: "2025-04-29", index: 4, total: 6, stock: 10, trades: [] },
-      { date: "2025-05-22", index: 7, total: 8, stock: 18, trades: ["Buy placeholder stock D, 80 shares"] },
-      { date: "2025-07-19", index: 12, total: 22, stock: 34, trades: [] },
-      { date: "2025-08-24", index: 18, total: 38, stock: 68, trades: ["Momentum add, placeholder note"] },
-      { date: "2025-09-18", index: 26, total: 61, stock: 98, trades: [] },
-      { date: "2025-10-08", index: 29, total: 63, stock: 70, trades: ["Sell placeholder stock A, partial"] },
-      { date: "2025-11-15", index: 24, total: 42, stock: 55, trades: [] },
-      { date: "2025-12-28", index: 31, total: 48, stock: 64, trades: ["Year-end rebalance placeholder"] },
-      { date: "2026-01-16", index: 30, total: 14, stock: 20, trades: [] },
-      { date: "2026-02-12", index: 30.5, total: 10, stock: 12, trades: ["Sell placeholder stock D"] },
-      { date: "2026-03-19", index: 28.11, total: 6.44, stock: 6.97, trades: [] }
+      { date: "2025-05-22", index: 7, total: 8, stock: 18, trades: [] },
+      { date: "2025-07-19", index: 12, total: 22, stock: 34, trades: [
+        { zh: "2025-07-15 买入 歌尔股份 500股，均价 22.44", en: "2025-07-15 Bought Goertek, 500 shares at 22.44" }
+      ] },
+      { date: "2025-08-24", index: 18, total: 38, stock: 68, trades: [] },
+      { date: "2025-09-18", index: 26, total: 61, stock: 98, trades: [
+        { zh: "2025-09-04 买入 比亚迪 100股，均价 104.80", en: "2025-09-04 Bought BYD, 100 shares at 104.80" },
+        { zh: "2025-09-11 卖出 立讯精密 1000股，均价 52.89", en: "2025-09-11 Sold Luxshare Precision, 1,000 shares at 52.89" },
+        { zh: "2025-09-15 卖出 歌尔股份 500股，均价 34.03", en: "2025-09-15 Sold Goertek, 500 shares at 34.03" },
+        { zh: "2025-09-19 卖出 立讯精密 共1000股，均价 55.20 / 55.69", en: "2025-09-19 Sold Luxshare Precision, 1,000 shares total at 55.20 / 55.69" },
+        { zh: "2025-09-19 买入 恒生电子 1000股，均价 33.49", en: "2025-09-19 Bought Hundsun Technologies, 1,000 shares at 33.49" }
+      ] },
+      { date: "2025-10-08", index: 29, total: 63, stock: 70, trades: [
+        { zh: "2025-10-10 买入 立讯精密 500股，均价 62.10", en: "2025-10-10 Bought Luxshare Precision, 500 shares at 62.10" },
+        { zh: "2025-10-10 买入 浪潮信息 500股，均价 71.85", en: "2025-10-10 Bought Inspur Electronic Information, 500 shares at 71.85" },
+        { zh: "2025-10-10 买入 歌尔股份 1000股，均价 36.50", en: "2025-10-10 Bought Goertek, 1,000 shares at 36.50" },
+        { zh: "2025-10-10 买入 豪威集团 200股，均价 142.50", en: "2025-10-10 Bought OmniVision-related position, 200 shares at 142.50" }
+      ] },
+      { date: "2025-11-15", index: 24, total: 42, stock: 55, trades: [
+        { zh: "2025-10-15 买入 立讯精密 500股，均价 54.00", en: "2025-10-15 Bought Luxshare Precision, 500 shares at 54.00" },
+        { zh: "2025-10-15 卖出 立讯精密 1000股，均价 58.23", en: "2025-10-15 Sold Luxshare Precision, 1,000 shares at 58.23" },
+        { zh: "2025-10-17 买入 立讯精密 500股，均价 55.81", en: "2025-10-17 Bought Luxshare Precision, 500 shares at 55.81" },
+        { zh: "2025-10-17 买入 歌尔股份 1000股，均价 31.17", en: "2025-10-17 Bought Goertek, 1,000 shares at 31.17" }
+      ] },
+      { date: "2025-12-28", index: 31, total: 48, stock: 64, trades: [
+        { zh: "2025-12-15 卖出 比亚迪 100股，均价 95.71", en: "2025-12-15 Sold BYD, 100 shares at 95.71" },
+        { zh: "2025-12-30 卖出 歌尔股份 2000股，均价 29.00", en: "2025-12-30 Sold Goertek, 2,000 shares at 29.00" },
+        { zh: "2025-12-31 卖出 豪威集团 200股，均价 127.08", en: "2025-12-31 Sold OmniVision-related position, 200 shares at 127.08" },
+        { zh: "2025-12-31 买入 合兴包装 10000股，均价 4.67", en: "2025-12-31 Bought Hexing Packaging, 10,000 shares at 4.67" }
+      ] },
+      { date: "2026-01-16", index: 30, total: 14, stock: 20, trades: [
+        { zh: "2026-01-06 卖出 立讯精密 共1500股，均价 58.60 / 59.45", en: "2026-01-06 Sold Luxshare Precision, 1,500 shares total at 58.60 / 59.45" },
+        { zh: "2026-01-06 买入 禾望电气 1600股，均价 32.80", en: "2026-01-06 Bought Hopewind Electric, 1,600 shares at 32.80" },
+        { zh: "2026-01-06 买入 凯撒旅业 8300股，均价 6.66", en: "2026-01-06 Bought Caesar Travel, 8,300 shares at 6.66" },
+        { zh: "2026-01-07 买入 鹭燕医药 1900股，均价 24.537", en: "2026-01-07 Bought Luyan Pharma, 1,900 shares at 24.537" },
+        { zh: "2026-01-07 买入 立讯精密 900股，均价 57.11", en: "2026-01-07 Bought Luxshare Precision, 900 shares at 57.11" }
+      ] },
+      { date: "2026-02-12", index: 30.5, total: 10, stock: 12, trades: [
+        { zh: "2026-01-12 卖出 南京熊猫 2300股，均价 19.93", en: "2026-01-12 Sold Nanjing Panda, 2,300 shares at 19.93" },
+        { zh: "2026-01-12 卖出 立讯精密 1400股，均价 55.38", en: "2026-01-12 Sold Luxshare Precision, 1,400 shares at 55.38" },
+        { zh: "2026-01-12 买入 鹭燕医药 2300股，均价 27.21", en: "2026-01-12 Bought Luyan Pharma, 2,300 shares at 27.21" },
+        { zh: "2026-01-13 买入 南京熊猫 3700股，均价 17.61", en: "2026-01-13 Bought Nanjing Panda, 3,700 shares at 17.61" }
+      ] },
+      { date: "2026-03-19", index: 28.11, total: 6.44, stock: 6.97, trades: [
+        { zh: "2026-03-03 买入 五洲新春 200股，均价 74.45", en: "2026-03-03 Bought Wuzhou Xinchun, 200 shares at 74.45" },
+        { zh: "2026-03-03 卖出 鹭燕医药 2400股，均价 14.98", en: "2026-03-03 Sold Luyan Pharma, 2,400 shares at 14.98" },
+        { zh: "2026-03-03 卖出 南京熊猫 2800股，均价 13.99", en: "2026-03-03 Sold Nanjing Panda, 2,800 shares at 13.99" },
+        { zh: "2026-03-10 买入 工业富联 400股，均价 53.93", en: "2026-03-10 Bought Foxconn Industrial Internet, 400 shares at 53.93" },
+        { zh: "2026-03-17 买入 五洲新春 300股，均价 71.43", en: "2026-03-17 Bought Wuzhou Xinchun, 300 shares at 71.43" }
+      ] }
     ];
 
     const chartRefs = {
@@ -397,7 +451,9 @@
       chartRefs.tooltipStock.textContent = formatPercent(point.stock);
       chartRefs.tooltipTradesLabel.textContent = lang === "zh" ? "当日成交" : "Trades";
       chartRefs.tooltipTradesList.innerHTML = "";
-      const trades = point.trades.length ? point.trades : [lang === "zh" ? "暂无成交记录，占位展示" : "No trade detail yet, placeholder only"];
+      const trades = point.trades.length
+        ? point.trades.map((trade) => (typeof trade === "string" ? trade : trade[lang]))
+        : [lang === "zh" ? "该日期未选取重点交易" : "No highlighted trade on this date"];
       trades.forEach((trade) => {
         const li = document.createElement("li");
         li.textContent = trade;
