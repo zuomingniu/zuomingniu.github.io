@@ -101,7 +101,7 @@ button {
 }
 
 .brand-logo {
-  width: 172px;
+  width: 115px;
   height: auto;
   object-fit: contain;
 }
@@ -109,13 +109,13 @@ button {
 .nav-tools {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 28px;
 }
 
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 28px;
 }
 
 .nav a {
@@ -186,16 +186,6 @@ button {
 
 .hero h1 {
   font-size: clamp(2rem, 4vw, 3.1rem);
-}
-
-.hero h1 span,
-.section-card h2 span,
-.contact-card h2 span {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.45em;
-  color: var(--muted);
-  letter-spacing: 0.04em;
 }
 
 .hero-prose {
@@ -270,7 +260,7 @@ button {
   }
 
   .brand-logo {
-    width: 148px;
+    width: 100px;
   }
 }
 
@@ -303,6 +293,6 @@ button {
   }
 
   .brand-logo {
-    width: 132px;
+    width: 92px;
   }
 }
