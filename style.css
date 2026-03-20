@@ -231,8 +231,9 @@ button {
   margin-top: 22px;
   padding: 24px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.44);
-  border: 1px solid rgba(255, 255, 255, 0.68);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  box-shadow: 0 18px 38px rgba(126, 114, 140, 0.12);
 }
 
 .finance-head {
@@ -246,11 +247,11 @@ button {
 .finance-head h3 {
   margin: 0;
   font-size: 1.22rem;
-  color: #446fbb;
+  color: #3f68b1;
 }
 
 .finance-link {
-  color: #557fcc;
+  color: #4f76bf;
   font-weight: 700;
 }
 
@@ -265,12 +266,13 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: var(--muted);
+  color: #5b5665;
   font-size: 0.98rem;
+  font-weight: 600;
 }
 
 .legend-item strong {
-  color: var(--text);
+  color: #2c2733;
 }
 
 .legend-dot,
@@ -309,14 +311,25 @@ button {
 }
 
 .chart-grid-line {
-  stroke: rgba(102, 102, 102, 0.22);
+  stroke: rgba(107, 105, 118, 0.34);
   stroke-width: 1;
 }
 
+.chart-grid-line.is-zero {
+  stroke: rgba(73, 70, 82, 0.62);
+  stroke-width: 1.35;
+}
+
 .chart-axis-label {
-  fill: #666173;
+  fill: #4f4b59;
   font-size: 13px;
+  font-weight: 700;
   font-family: "Manrope", "Noto Sans SC", sans-serif;
+}
+
+.chart-axis-line {
+  stroke: rgba(73, 70, 82, 0.72);
+  stroke-width: 1.35;
 }
 
 .chart-area {
@@ -351,19 +364,21 @@ button {
 }
 
 .hover-line {
-  stroke: rgba(65, 65, 65, 0.5);
-  stroke-width: 1.2;
+  stroke: rgba(61, 60, 69, 0.54);
+  stroke-width: 1.15;
 }
 
 .chart-tooltip {
   position: absolute;
   z-index: 4;
-  width: 240px;
+  width: 286px;
+  max-height: 272px;
   padding: 16px 18px;
   border-radius: 18px;
-  background: rgba(70, 70, 78, 0.86);
+  background: rgba(48, 49, 56, 0.93);
   color: white;
-  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.24);
+  overflow: auto;
 }
 
 .tooltip-date {
@@ -396,7 +411,8 @@ button {
 
 .tooltip-trades-label {
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 700;
 }
 
 .tooltip-trades ul {
@@ -405,6 +421,7 @@ button {
   display: grid;
   gap: 6px;
   font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.96);
 }
 
 .finance-tabs {
@@ -420,8 +437,8 @@ button {
 .finance-tab {
   min-height: 56px;
   border: 0;
-  background: rgba(255, 255, 255, 0.45);
-  color: var(--muted);
+  background: rgba(255, 255, 255, 0.68);
+  color: #5b5665;
   font-weight: 700;
 }
 
@@ -430,8 +447,8 @@ button {
 }
 
 .finance-tab.is-active {
-  background: rgba(24, 24, 28, 0.06);
-  color: var(--text);
+  background: rgba(45, 44, 52, 0.1);
+  color: #26212b;
 }
 
 .photo-grid {
