@@ -98,17 +98,17 @@ img {
   align-items: center;
   gap: 12px;
   font-family: "Manrope", "Noto Sans SC", sans-serif;
-  font-size: 1rem;
+  font-size: 0.96rem;
   font-weight: 800;
   letter-spacing: 0.02em;
 }
 
 .brand-logo {
-  width: 58px;
-  height: 58px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 14px 30px rgba(123, 111, 137, 0.18);
+  width: 92px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .nav {
@@ -188,7 +188,7 @@ img {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 6vw, 4.6rem);
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .hero h1 span,
@@ -202,16 +202,10 @@ img {
   letter-spacing: 0.04em;
 }
 
-.hero-text,
 .section-card p,
 .contact-links,
 .footer-inner {
   color: var(--muted);
-}
-
-.hero-text {
-  margin: 18px 0 0;
-  font-size: 1.04rem;
 }
 
 .hero-panel {
@@ -222,10 +216,10 @@ img {
 }
 
 .avatar {
-  width: min(100%, 240px);
+  width: min(100%, 190px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 24px;
+  border-radius: 22px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 18px 40px rgba(145, 131, 157, 0.16);
 }
@@ -278,11 +272,6 @@ img {
   text-decoration: underline;
   text-decoration-color: rgba(116, 183, 255, 0.45);
   text-underline-offset: 3px;
-}
-
-.section-note {
-  margin-top: 16px;
-  font-size: 0.94rem;
 }
 
 .contact-card {
@@ -346,7 +335,6 @@ img {
   }
 
   .brand-logo {
-    width: 50px;
-    height: 50px;
+    width: 76px;
   }
 }
