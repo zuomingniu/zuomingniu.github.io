@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zuoming Niu | Personal Website</title>
+  <title>牛作明 | Zuoming Niu</title>
   <meta
     name="description"
-    content="Zuoming Niu is an undergraduate student focused on AI systems, integrated circuits, security, and thoughtful technical communication."
+    content="牛作明的个人主页，包含关于我、金融、摄影与联系信息。 Personal website of Zuoming Niu."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="style.css" />
@@ -23,10 +23,14 @@
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#top">Zuoming Niu</a>
+      <a class="brand" href="#top">
+        <img class="brand-logo" src="assets/logo.png" alt="Zuoming Niu logo" />
+        <span>Zuoming Niu</span>
+      </a>
       <nav class="nav">
         <a href="#about">About</a>
-        <a href="#work">Work</a>
+        <a href="#finance">金融</a>
+        <a href="#photography">摄影</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -35,97 +39,74 @@
   <main id="top">
     <section class="hero container">
       <div class="hero-copy glass-card">
-        <p class="eyebrow">Nick | Zuoming Niu</p>
-        <h1>A lighter, simpler space for my work and background.</h1>
+        <p class="eyebrow">个人主页 | Personal Website</p>
+        <h1>牛作明 <span>Zuoming Niu</span></h1>
         <p class="hero-text">
-          I am an undergraduate student at Xi'an Jiaotong University, working across
-          AI systems, integrated circuit design, security, and technical storytelling.
-          I like building things carefully and explaining them clearly.
+          西安交通大学本科生。<br />
+          Undergraduate student at Xi'an Jiaotong University.
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="assets/cv.pdf" target="_blank" rel="noopener">View CV</a>
-          <a class="btn btn-secondary" href="#work">Selected Projects</a>
-        </div>
       </div>
 
       <aside class="hero-panel glass-card">
-        <img src="assets/avatar-placeholder.svg" alt="Zuoming Niu avatar placeholder" class="avatar" />
-        <div class="panel-copy">
-          <p class="panel-label">Current Focus</p>
-          <p>
-            Cross-disciplinary problem solving across software systems, privacy and
-            security, and chip-level design.
-          </p>
-        </div>
+        <img src="assets/头像.png" alt="牛作明头像" class="avatar" />
       </aside>
     </section>
 
-    <section id="about" class="section container intro-grid">
+    <section id="about" class="section container">
       <article class="glass-card section-card">
         <p class="section-label">About</p>
-        <h2>Grounded in engineering, shaped by communication.</h2>
-        <p>
-          My training sits between computing and hardware. Alongside coursework and
-          research projects, I have also led media production and student teams, which
-          pushed me to think not only about technical depth, but also about structure,
-          clarity, and audience.
-        </p>
-      </article>
+        <h2>关于我 <span>About</span></h2>
 
-      <article class="glass-card section-card compact-card">
-        <p class="section-label">Highlights</p>
-        <ul class="simple-list">
-          <li>AI systems and federated learning security</li>
-          <li>Full-custom CMOS and circuit-to-layout practice</li>
-          <li>Team leadership and technical presentation</li>
-        </ul>
+        <div class="info-block">
+          <h3>教育经历 | Education</h3>
+          <p>
+            西安交通大学，计算机科学与技术（集成电路专项班）本科。<br />
+            Xi'an Jiaotong University, B.S. in Computer Science and Technology
+            (Special Class for Integrated Circuits).
+          </p>
+        </div>
+
+        <div class="info-block">
+          <h3>NUS 论文 | NUS Paper</h3>
+          <p>
+            在 NUS 项目中完成关于联邦学习安全问题的论文写作，关注隐私攻击、梯度反演与防御方法。<br />
+            Paper written at NUS on security weaknesses in federated learning,
+            including privacy attacks, gradient inversion, and defenses.
+          </p>
+        </div>
       </article>
     </section>
 
-    <section id="work" class="section container">
-      <div class="section-heading">
-        <p class="section-label">Selected Work</p>
-        <h2>A few projects that represent my current direction.</h2>
-      </div>
+    <section id="finance" class="section container">
+      <article class="glass-card section-card">
+        <p class="section-label">Finance</p>
+        <h2>金融 <span>Finance</span></h2>
+        <p>
+          这里会逐步整理我对市场、公司与数据的观察。<br />
+          Notes on markets, companies, and data.
+        </p>
+      </article>
+    </section>
 
-      <div class="project-grid">
-        <article class="glass-card project-card">
-          <div class="project-meta">
-            <span>Security Research</span>
-            <span>May 2025 - Jul 2025</span>
-          </div>
-          <h3>FL Breaker: Security Weakness of Federated Learning</h3>
-          <p>
-            Reproduced gradient inversion attacks, studied reconstruction behavior,
-            and compared privacy defenses including differential privacy, secure
-            computation, and encryption-based approaches.
-          </p>
-        </article>
-
-        <article class="glass-card project-card">
-          <div class="project-meta">
-            <span>Integrated Circuits</span>
-            <span>Oct 2024 - Dec 2024</span>
-          </div>
-          <h3>Full-Custom SN74HC259 in 0.18 um CMOS</h3>
-          <p>
-            Worked through schematic design, simulation, layout, extraction, and
-            post-layout verification in a complete custom digital IC workflow.
-          </p>
-        </article>
-      </div>
+    <section id="photography" class="section container">
+      <article class="glass-card section-card">
+        <p class="section-label">Photography</p>
+        <h2>摄影 <span>Photography</span></h2>
+        <p>
+          摄影是我记录光线、场景与日常细节的方式。<br />
+          A small space for light, places, and visual notes.
+        </p>
+      </article>
     </section>
 
     <section id="contact" class="section container">
       <article class="glass-card contact-card">
         <div>
           <p class="section-label">Contact</p>
-          <h2>Open to research, collaboration, and thoughtful projects.</h2>
+          <h2>联系 <span>Contact</span></h2>
         </div>
         <div class="contact-links">
-          <a href="mailto:zuomingniu@gmail.com">zuomingniu@gmail.com</a>
-          <span>Xi'an, Shaanxi, China</span>
-          <a href="assets/cv.pdf" target="_blank" rel="noopener">Resume PDF</a>
+          <a href="mailto:Niuzuoming@outlook.com">Niuzuoming@outlook.com</a>
         </div>
       </article>
     </section>
@@ -133,8 +114,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; 2026 Zuoming Niu</p>
-      <p>Built with GitHub Pages.</p>
+      <p>&copy; 2026 牛作明 | Zuoming Niu</p>
     </div>
   </footer>
 </body>
