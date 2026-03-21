@@ -6,13 +6,17 @@ const translations = {
     nav_contact: "Contact",
     eyebrow: "About",
     hero_name: "Zuoming Niu",
-    about_p1: "I am currently an undergraduate student in Computer Science and Technology (Experimental Class for Integrated Circuits) at Xi'an Jiaotong University, and expect to graduate in July 2026.",
-    about_p2: "From May to July 2025, I joined the NUS School of Computing Workshop and worked on federated learning security. During the workshop, I contributed to the paper \"FL Breaker: Demonstrating Security Weaknesses of Federated Learning.\"",
-    about_p3: "Beyond formal coursework, I keep a steady interest in finance and photography. Finance keeps me attentive to markets and information, while photography gives me a way to observe light, places, and everyday details with patience.",
+    about_p1:
+      "I am currently an undergraduate student in Computer Science and Technology (Experimental Class for Integrated Circuits) at Xi'an Jiaotong University, and expect to graduate in July 2026.",
+    about_p2:
+      'From May to July 2025, I joined the NUS School of Computing Workshop and worked on federated learning security. During the workshop, I contributed to the paper "FL Breaker: Demonstrating Security Weaknesses of Federated Learning."',
+    about_p3:
+      "Beyond formal coursework, I keep a steady interest in finance and photography. Finance keeps me attentive to markets and information, while photography gives me a way to observe light, places, and everyday details with patience.",
     finance_title: "Finance",
-    finance_body: "A trading-day return chart reconstructed to match the reference layout as closely as possible.",
+    finance_body:
+      "An interactive reconstruction of my two-year return curve using daily chart data and brokerage records. Hover to inspect values and trades by date.",
     chart_title: "Two-Year Return Comparison",
-    chart_link: "My holdings ›",
+    chart_link: "My holdings \u203a",
     legend_index: "CSI 300",
     legend_total: "Total Return",
     legend_stock: "Stocks",
@@ -22,15 +26,12 @@ const translations = {
     tab_two_year: "2Y",
     tab_custom: "Custom",
     summary_index_label: "CSI 300",
-    summary_index_value: "-- +28.11%",
     summary_total_label: "Total Return",
-    summary_total_value: "+10,074.37 +6.44%",
     summary_stock_label: "Stocks",
-    summary_stock_value: "+9,878.14 +6.97%",
     summary_cash_label: "Cash",
-    summary_cash_value: "+55.80 +0.18%",
     summary_bond_label: "Bonds",
-    summary_bond_value: "+140.43 +0.10%",
+    tooltip_trades: "Trades",
+    tooltip_no_trades: "No stock trade on this date.",
     photo_title: "Photography",
     photo_body: "Two photographs currently on display, with more work to be added over time.",
     photo_caption_1_title: "Xinghai Square, Dalian",
@@ -38,172 +39,64 @@ const translations = {
     photo_caption_2_title: "XJTU Graduation Gala",
     photo_caption_2_meta: "May 26, 2024",
     contact_title: "Contact",
-    footer: "&copy; 2026 Zuoming Niu"
+    footer: "\u00a9 2026 Zuoming Niu",
+    description:
+      "Personal website of Zuoming Niu, with sections on about, finance, photography, and contact."
   },
   zh: {
-    nav_about: "关于",
-    nav_finance: "金融",
-    nav_photography: "摄影",
-    nav_contact: "联系",
-    eyebrow: "关于",
-    hero_name: "牛作铭",
-    about_p1: "我目前就读于西安交通大学计算机科学与技术（集成电路实验班），预计于 2026 年 7 月毕业。",
-    about_p2: "2025 年 5 月至 7 月，我参加了新加坡国立大学 School of Computing Workshop，围绕联邦学习安全开展研究，并参与论文《FL Breaker: Demonstrating Security Weaknesses of Federated Learning》的写作。",
-    about_p3: "除正式课程之外，我也持续关注金融与摄影。金融让我保持对市场与信息的敏感，摄影则让我更耐心地观察光线、场景与日常细节。",
-    finance_title: "金融",
-    finance_body: "这里展示按交易日重建的近两年收益曲线，并尽量贴近你给出的参考图表。",
-    chart_title: "近两年收益对比",
-    chart_link: "我的股票 ›",
-    legend_index: "沪深300",
-    legend_total: "总收益",
-    legend_stock: "股票",
-    tab_month: "本月",
-    tab_year: "今年",
-    tab_half: "近半年",
-    tab_two_year: "近两年",
-    tab_custom: "自定义",
-    summary_index_label: "沪深300",
-    summary_index_value: "-- +28.11%",
-    summary_total_label: "总收益",
-    summary_total_value: "+10,074.37 +6.44%",
-    summary_stock_label: "股票",
-    summary_stock_value: "+9,878.14 +6.97%",
-    summary_cash_label: "现金",
-    summary_cash_value: "+55.80 +0.18%",
-    summary_bond_label: "债券",
-    summary_bond_value: "+140.43 +0.10%",
-    photo_title: "摄影",
-    photo_body: "先展示两张摄影作品，后续会继续补充更多照片与视觉记录。",
-    photo_caption_1_title: "摄于大连星海广场",
-    photo_caption_1_meta: "2022 年 12 月 23 日",
-    photo_caption_2_title: "摄于交大毕业晚会",
-    photo_caption_2_meta: "2024 年 5 月 26 日",
-    contact_title: "联系",
-    footer: "&copy; 2026 牛作铭"
+    nav_about: "\u5173\u4e8e",
+    nav_finance: "\u91d1\u878d",
+    nav_photography: "\u6444\u5f71",
+    nav_contact: "\u8054\u7cfb",
+    eyebrow: "\u5173\u4e8e",
+    hero_name: "\u725b\u4f5c\u94ed",
+    about_p1:
+      "\u6211\u76ee\u524d\u5c31\u8bfb\u4e8e\u897f\u5b89\u4ea4\u901a\u5927\u5b66\u96c6\u6210\u7535\u8def\u5b9e\u9a8c\u73ed\uff0c\u9884\u8ba1\u4e8e 2026 \u5e74 7 \u6708\u6bd5\u4e1a\u3002",
+    about_p2:
+      "2025 \u5e74 5 \u6708\u81f3 7 \u6708\uff0c\u6211\u53c2\u52a0\u4e86 NUS School of Computing Workshop\uff0c\u56f4\u7ed5\u8054\u90a6\u5b66\u4e60\u5b89\u5168\u5f00\u5c55\u7814\u7a76\uff0c\u5e76\u53c2\u4e0e\u8bba\u6587\u300aFL Breaker: Demonstrating Security Weaknesses of Federated Learning.\u300b\u7684\u5199\u4f5c\u3002",
+    about_p3:
+      "\u9664\u6b63\u5f0f\u8bfe\u7a0b\u4e4b\u5916\uff0c\u6211\u4e5f\u6301\u7eed\u5173\u6ce8\u91d1\u878d\u4e0e\u6444\u5f71\u3002\u91d1\u878d\u8ba9\u6211\u4fdd\u6301\u5bf9\u5e02\u573a\u4e0e\u4fe1\u606f\u7684\u654f\u611f\uff0c\u6444\u5f71\u5219\u8ba9\u6211\u66f4\u8010\u5fc3\u5730\u89c2\u5bdf\u5149\u7ebf\u3001\u573a\u666f\u4e0e\u65e5\u5e38\u7ec6\u8282\u3002",
+    finance_title: "\u91d1\u878d",
+    finance_body:
+      "\u8fd9\u91cc\u5c55\u793a\u6839\u636e\u6bcf\u65e5\u56fe\u8868\u6570\u636e\u4e0e\u5bf9\u8d26\u5355\u91cd\u5efa\u7684\u8fd1\u4e24\u5e74\u6536\u76ca\u66f2\u7ebf\uff0c\u9f20\u6807\u60ac\u505c\u65f6\u53ef\u4ee5\u67e5\u770b\u5f53\u65e5\u6570\u503c\u4e0e\u6210\u4ea4\u660e\u7ec6\u3002",
+    chart_title: "\u8fd1\u4e24\u5e74\u6536\u76ca\u5bf9\u6bd4",
+    chart_link: "\u6211\u7684\u80a1\u7968 \u203a",
+    legend_index: "\u6caa\u6df1300",
+    legend_total: "\u603b\u6536\u76ca",
+    legend_stock: "\u80a1\u7968",
+    tab_month: "\u672c\u6708",
+    tab_year: "\u4eca\u5e74",
+    tab_half: "\u8fd1\u534a\u5e74",
+    tab_two_year: "\u8fd1\u4e24\u5e74",
+    tab_custom: "\u81ea\u5b9a\u4e49",
+    summary_index_label: "\u6caa\u6df1300",
+    summary_total_label: "\u603b\u6536\u76ca",
+    summary_stock_label: "\u80a1\u7968",
+    summary_cash_label: "\u73b0\u91d1",
+    summary_bond_label: "\u503a\u5238",
+    tooltip_trades: "\u6210\u4ea4\u660e\u7ec6",
+    tooltip_no_trades: "\u5f53\u65e5\u6682\u65e0\u80a1\u7968\u4e70\u5356\u8bb0\u5f55\u3002",
+    photo_title: "\u6444\u5f71",
+    photo_body: "\u76ee\u524d\u5148\u5c55\u793a\u4e24\u5f20\u6444\u5f71\u4f5c\u54c1\uff0c\u540e\u7eed\u4f1a\u7ee7\u7eed\u8865\u5145\u3002",
+    photo_caption_1_title: "\u5927\u8fde\u661f\u6d77\u5e7f\u573a",
+    photo_caption_1_meta: "2022 \u5e74 12 \u6708 23 \u65e5",
+    photo_caption_2_title: "\u4ea4\u5927\u6bd5\u4e1a\u665a\u4f1a",
+    photo_caption_2_meta: "2024 \u5e74 5 \u6708 26 \u65e5",
+    contact_title: "\u8054\u7cfb",
+    footer: "\u00a9 2026 \u725b\u4f5c\u94ed",
+    description:
+      "\u725b\u4f5c\u94ed\u7684\u4e2a\u4eba\u4e3b\u9875\uff0c\u5305\u542b\u5173\u4e8e\u6211\u3001\u91d1\u878d\u3001\u6444\u5f71\u4e0e\u8054\u7cfb\u4fe1\u606f\u3002"
   }
 };
-
-const tradeCatalog = [
-  { date: "2024-02-29", action: "buy", stockZh: "中国银行", stockEn: "Bank of China", code: "601988", quantity: 500, prices: ["4.45"] },
-  { date: "2024-03-01", action: "buy", stockZh: "中国核电", stockEn: "China National Nuclear Power", code: "601985", quantity: 200, prices: ["8.54"] },
-  { date: "2024-04-08", action: "sell", stockZh: "中国核电", stockEn: "China National Nuclear Power", code: "601985", quantity: 200, prices: ["9.48"] },
-  { date: "2024-05-23", action: "buy", stockZh: "恒生电子", stockEn: "Hundsun Technologies", code: "600570", quantity: 2800, prices: ["21.15", "21.01"] },
-  { date: "2024-06-06", action: "buy", stockZh: "恒生电子", stockEn: "Hundsun Technologies", code: "600570", quantity: 1600, prices: ["19.50"] },
-  { date: "2024-11-05", action: "sell", stockZh: "恒生电子", stockEn: "Hundsun Technologies", code: "600570", quantity: 4400, prices: ["29.15", "29.15"] },
-  { date: "2024-11-06", action: "buy", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 1500, prices: ["42.00"] },
-  { date: "2024-11-22", action: "buy", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 1500, prices: ["37.75"] },
-  { date: "2024-12-16", action: "sell", stockZh: "中国银行", stockEn: "Bank of China", code: "601988", quantity: 500, prices: ["5.28"] },
-  { date: "2025-07-15", action: "buy", stockZh: "歌尔股份", stockEn: "Goertek", code: "002241", quantity: 500, prices: ["22.44"] },
-  { date: "2025-09-04", action: "buy", stockZh: "比亚迪", stockEn: "BYD", code: "002594", quantity: 100, prices: ["104.80"] },
-  { date: "2025-09-11", action: "sell", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 1000, prices: ["52.89"] },
-  { date: "2025-09-15", action: "sell", stockZh: "歌尔股份", stockEn: "Goertek", code: "002241", quantity: 500, prices: ["34.03"] },
-  { date: "2025-09-19", action: "sell", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 1000, prices: ["55.20", "55.69"] },
-  { date: "2025-09-19", action: "buy", stockZh: "恒生电子", stockEn: "Hundsun Technologies", code: "600570", quantity: 1000, prices: ["33.49"] },
-  { date: "2025-10-10", action: "buy", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 500, prices: ["62.10"] },
-  { date: "2025-10-10", action: "buy", stockZh: "浪潮信息", stockEn: "Inspur Information", code: "000977", quantity: 500, prices: ["71.85"] },
-  { date: "2025-10-10", action: "buy", stockZh: "歌尔股份", stockEn: "Goertek", code: "002241", quantity: 1000, prices: ["36.50"] },
-  { date: "2025-10-10", action: "buy", stockZh: "豪威集团", stockEn: "Will Semiconductor", code: "603501", quantity: 200, prices: ["142.50"] },
-  { date: "2025-12-31", action: "buy", stockZh: "合兴包装", stockEn: "Hexing Packaging", code: "002228", quantity: 10000, prices: ["4.67"] },
-  { date: "2026-01-06", action: "buy", stockZh: "禾望电气", stockEn: "Hopewind Electric", code: "603063", quantity: 1600, prices: ["32.80"] },
-  { date: "2026-01-07", action: "buy", stockZh: "鹭燕医药", stockEn: "Luyan Pharma", code: "002788", quantity: 1900, prices: ["24.537"] },
-  { date: "2026-01-08", action: "buy", stockZh: "南京熊猫", stockEn: "Nanjing Panda", code: "600775", quantity: 2300, prices: ["17.00"] },
-  { date: "2026-03-10", action: "buy", stockZh: "工业富联", stockEn: "Foxconn Industrial Internet", code: "601138", quantity: 400, prices: ["53.93"] }
-];
-
-const seriesControlPoints = {
-  index: [
-    ["2024-03-20", -2.0],
-    ["2024-05-03", 0.75],
-    ["2024-06-09", -1.6],
-    ["2024-08-29", -10.2],
-    ["2024-09-18", 10.0],
-    ["2024-10-18", 14.0],
-    ["2024-11-05", 8.0],
-    ["2024-11-18", 10.0],
-    ["2024-12-16", 5.0],
-    ["2025-02-07", 10.0],
-    ["2025-04-29", 4.0],
-    ["2025-07-19", 12.0],
-    ["2025-09-18", 26.0],
-    ["2025-10-12", 29.0],
-    ["2025-11-15", 24.0],
-    ["2025-12-15", 31.0],
-    ["2026-01-16", 30.0],
-    ["2026-03-19", 28.11]
-  ],
-  total: [
-    ["2024-03-20", 0.0],
-    ["2024-05-03", 0.36],
-    ["2024-06-09", -4.0],
-    ["2024-08-29", -21.0],
-    ["2024-09-18", 12.0],
-    ["2024-10-07", 36.0],
-    ["2024-10-25", 33.0],
-    ["2024-11-20", 48.0],
-    ["2024-12-12", 44.0],
-    ["2025-02-07", 52.0],
-    ["2025-03-28", 44.0],
-    ["2025-04-10", 2.0],
-    ["2025-05-22", 8.0],
-    ["2025-07-19", 22.0],
-    ["2025-08-28", 61.0],
-    ["2025-10-08", 63.0],
-    ["2025-10-30", 42.0],
-    ["2025-11-30", 50.0],
-    ["2025-12-28", 49.0],
-    ["2026-01-16", 14.0],
-    ["2026-03-19", 6.44]
-  ],
-  stock: [
-    ["2024-03-20", 1.0],
-    ["2024-04-15", 8.0],
-    ["2024-05-03", 8.79],
-    ["2024-06-09", -6.0],
-    ["2024-07-08", -19.0],
-    ["2024-08-29", -21.0],
-    ["2024-09-10", 34.0],
-    ["2024-10-07", 40.0],
-    ["2024-10-25", 37.0],
-    ["2024-11-20", 48.0],
-    ["2024-12-12", 40.0],
-    ["2025-02-07", 61.0],
-    ["2025-03-25", 44.0],
-    ["2025-04-10", 1.0],
-    ["2025-05-22", 18.0],
-    ["2025-07-19", 35.0],
-    ["2025-08-28", 82.0],
-    ["2025-09-18", 98.0],
-    ["2025-10-08", 55.0],
-    ["2025-10-20", 72.0],
-    ["2025-11-15", 56.0],
-    ["2025-12-15", 64.0],
-    ["2025-12-28", 20.0],
-    ["2026-01-16", 12.0],
-    ["2026-03-19", 6.97]
-  ]
-};
-
-const xTickDates = [
-  "2024-03-20",
-  "2024-06-09",
-  "2024-08-29",
-  "2024-11-18",
-  "2025-02-07",
-  "2025-04-29",
-  "2025-07-19",
-  "2025-10-08",
-  "2025-12-28",
-  "2026-03-19"
-];
 
 const chartRefs = {
   svg: document.getElementById("finance-chart"),
   grid: document.getElementById("chart-grid"),
+  indexArea: document.getElementById("index-area"),
+  stockArea: document.getElementById("stock-area"),
   indexLine: document.getElementById("index-line"),
   totalLine: document.getElementById("total-line"),
   stockLine: document.getElementById("stock-line"),
-  indexArea: document.getElementById("index-area"),
-  stockArea: document.getElementById("stock-area"),
   hoverLine: document.getElementById("hover-line"),
   tooltip: document.getElementById("chart-tooltip"),
   tooltipDate: document.getElementById("tooltip-date"),
@@ -214,315 +107,302 @@ const chartRefs = {
   tooltipTradesList: document.getElementById("tooltip-trades-list"),
   legendIndex: document.getElementById("legend-index-value"),
   legendTotal: document.getElementById("legend-total-value"),
-  legendStock: document.getElementById("legend-stock-value")
+  legendStock: document.getElementById("legend-stock-value"),
+  summaryIndex: document.getElementById("summary-index-value"),
+  summaryTotal: document.getElementById("summary-total-value"),
+  summaryStock: document.getElementById("summary-stock-value"),
+  summaryCash: document.getElementById("summary-cash-value"),
+  summaryBond: document.getElementById("summary-bond-value")
 };
 
-const DAY_MS = 24 * 60 * 60 * 1000;
 const chartState = {
   lang: "en",
-  minY: -30,
-  maxY: 120,
+  data: null,
+  hoverIndex: null,
+  ticks: {
+    x: [
+      "2024-03-20",
+      "2024-06-09",
+      "2024-08-29",
+      "2024-11-18",
+      "2025-02-07",
+      "2025-04-29",
+      "2025-07-19",
+      "2025-10-08",
+      "2025-12-28",
+      "2026-03-19"
+    ],
+    y: [-30, 0, 30, 60, 90, 120]
+  },
   margin: { top: 24, right: 18, bottom: 42, left: 58 }
 };
 
-const parseDate = (dateStr) => {
-  const [year, month, day] = dateStr.split("-").map(Number);
-  return new Date(Date.UTC(year, month - 1, day));
-};
+const svgNS = "http://www.w3.org/2000/svg";
 
-const toDateString = (date) => {
-  const year = date.getUTCFullYear();
-  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
-  const day = String(date.getUTCDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
-};
+const formatTooltipValue = (value) => Number(value).toFixed(2);
 
-const formatPercent = (value) => `${value >= 0 ? "+" : ""}${value.toFixed(2)}%`;
+const formatQuantity = (value) => Number(value).toLocaleString("en-US");
 
 const formatTrade = (trade, lang) => {
   const prices = trade.prices.join(" / ");
   if (lang === "zh") {
-    return `${trade.date} ${trade.action === "buy" ? "买入" : "卖出"} ${trade.stockZh} ${trade.quantity}股，均价 ${prices}`;
+    return `${trade.action === "buy" ? "\u4e70\u5165" : "\u5356\u51fa"} ${trade.stockZh} (${trade.code}) ${formatQuantity(trade.quantity)}\u80a1\uff0c\u6210\u4ea4\u4ef7 ${prices}`;
   }
-  return `${trade.date} ${trade.action === "buy" ? "Bought" : "Sold"} ${trade.stockEn} (${trade.code}) ${trade.quantity} shares at ${prices}`;
+  return `${trade.action === "buy" ? "Bought" : "Sold"} ${formatQuantity(trade.quantity)} shares of ${trade.stockEn} (${trade.code}) at ${prices}`;
 };
 
-const seededNoise = (seed) => {
-  const raw = Math.sin(seed * 12.9898 + 78.233) * 43758.5453;
-  return raw - Math.floor(raw);
+const getChartSize = () => {
+  const viewBox = chartRefs.svg.viewBox.baseVal;
+  return { width: viewBox.width, height: viewBox.height };
 };
 
-const tradeRecords = tradeCatalog.reduce((records, trade) => {
-  if (!records[trade.date]) {
-    records[trade.date] = [];
+const getInnerWidth = (width) => width - chartState.margin.left - chartState.margin.right;
+
+const getInnerHeight = (height) => height - chartState.margin.top - chartState.margin.bottom;
+
+const getPointCount = () => (chartState.data ? chartState.data.points.length : 0);
+
+const getXForIndex = (index, width) => {
+  const points = getPointCount();
+  if (points <= 1) {
+    return chartState.margin.left;
   }
-  records[trade.date].push(trade);
-  return records;
-}, {});
-
-const chartStart = parseDate("2024-03-20");
-const chartEnd = parseDate("2026-03-19");
-const totalSpan = chartEnd.getTime() - chartStart.getTime();
-
-const generateTradingDays = (start, end) => {
-  const dates = [];
-  for (let time = start.getTime(); time <= end.getTime(); time += DAY_MS) {
-    const date = new Date(time);
-    const weekday = date.getUTCDay();
-    if (weekday !== 0 && weekday !== 6) {
-      dates.push(toDateString(date));
-    }
-  }
-  return dates;
-};
-
-const tradingDates = generateTradingDays(chartStart, chartEnd);
-
-const buildSeriesValues = (seriesName) => {
-  const controls = seriesControlPoints[seriesName].map(([date, value]) => ({
-    date,
-    value,
-    time: parseDate(date).getTime()
-  }));
-  const values = new Map();
-  const volatilitySeed = { index: 11, total: 37, stock: 73 }[seriesName];
-  const volatilityBase = { index: 0.55, total: 1.05, stock: 1.55 }[seriesName];
-  const quantizeStep = { index: 0.08, total: 0.14, stock: 0.18 }[seriesName];
-
-  for (let segmentIndex = 0; segmentIndex < controls.length - 1; segmentIndex += 1) {
-    const current = controls[segmentIndex];
-    const next = controls[segmentIndex + 1];
-    const segmentDates = tradingDates.filter((date) => date >= current.date && date <= next.date);
-    const steps = segmentDates.length - 1;
-    if (!segmentDates.length) {
-      continue;
-    }
-
-    const walk = new Array(segmentDates.length).fill(0);
-    let cumulative = 0;
-    const delta = Math.abs(next.value - current.value);
-    const volatility = volatilityBase + delta * 0.025;
-
-    for (let index = 1; index < segmentDates.length; index += 1) {
-      const noise = seededNoise(volatilitySeed * 1000 + segmentIndex * 97 + index * 31) - 0.5;
-      cumulative += noise * volatility;
-      walk[index] = cumulative;
-    }
-
-    const finalOffset = walk[walk.length - 1];
-
-    segmentDates.forEach((date, index) => {
-      const ratio = steps === 0 ? 0 : index / steps;
-      const base = current.value + (next.value - current.value) * ratio;
-      const bridge = walk[index] - finalOffset * ratio;
-      const envelope = Math.sin(Math.PI * ratio);
-      const stepped = base + bridge * envelope;
-      const quantized = Math.round(stepped / quantizeStep) * quantizeStep;
-      values.set(date, Number(quantized.toFixed(2)));
-    });
-  }
-
-  controls.forEach((point) => {
-    values.set(point.date, point.value);
-  });
-
-  return values;
-};
-
-const indexValues = buildSeriesValues("index");
-const totalValues = buildSeriesValues("total");
-const stockValues = buildSeriesValues("stock");
-
-const chartData = tradingDates.map((date) => ({
-  date,
-  time: parseDate(date).getTime(),
-  index: indexValues.get(date),
-  total: totalValues.get(date),
-  stock: stockValues.get(date),
-  trades: tradeRecords[date] || []
-}));
-
-const getXForTime = (time, width) => {
-  const { left, right } = chartState.margin;
-  const innerWidth = width - left - right;
-  return left + ((time - chartStart.getTime()) / totalSpan) * innerWidth;
+  return chartState.margin.left + (index * getInnerWidth(width)) / (points - 1);
 };
 
 const getYForValue = (value, height) => {
-  const { top, bottom } = chartState.margin;
-  const innerHeight = height - top - bottom;
-  return top + ((chartState.maxY - value) / (chartState.maxY - chartState.minY)) * innerHeight;
+  const minY = chartState.ticks.y[0];
+  const maxY = chartState.ticks.y[chartState.ticks.y.length - 1];
+  return (
+    chartState.margin.top +
+    ((maxY - value) / (maxY - minY)) * getInnerHeight(height)
+  );
 };
 
-const getSeriesPath = (seriesName, width, height) => chartData.map((point, index) => {
-  const x = getXForTime(point.time, width);
-  const y = getYForValue(point[seriesName], height);
-  return `${index === 0 ? "M" : "L"} ${x.toFixed(2)} ${y.toFixed(2)}`;
-}).join(" ");
+const getSeriesPath = (key, width, height) =>
+  chartState.data.points
+    .map((point, index) => {
+      const x = getXForIndex(index, width);
+      const y = getYForValue(point[key], height);
+      return `${index === 0 ? "M" : "L"} ${x.toFixed(2)} ${y.toFixed(2)}`;
+    })
+    .join(" ");
 
-const getAreaPath = (seriesName, width, height) => {
-  const baseline = getYForValue(0, height);
-  const points = chartData.map((point) => [getXForTime(point.time, width), getYForValue(point[seriesName], height)]);
-  const first = points[0];
-  const last = points[points.length - 1];
-  const path = [`M ${first[0].toFixed(2)} ${baseline.toFixed(2)}`];
-  points.forEach(([x, y]) => path.push(`L ${x.toFixed(2)} ${y.toFixed(2)}`));
-  path.push(`L ${last[0].toFixed(2)} ${baseline.toFixed(2)}`);
-  path.push("Z");
+const getAreaPath = (key, width, height) => {
+  const baselineY = getYForValue(0, height);
+  const path = [`M ${getXForIndex(0, width).toFixed(2)} ${baselineY.toFixed(2)}`];
+  chartState.data.points.forEach((point, index) => {
+    const x = getXForIndex(index, width);
+    const y = getYForValue(point[key], height);
+    path.push(`L ${x.toFixed(2)} ${y.toFixed(2)}`);
+  });
+  path.push(
+    `L ${getXForIndex(chartState.data.points.length - 1, width).toFixed(2)} ${baselineY.toFixed(2)}`,
+    "Z"
+  );
   return path.join(" ");
 };
 
+const createSvgNode = (name, attrs = {}) => {
+  const node = document.createElementNS(svgNS, name);
+  Object.entries(attrs).forEach(([key, value]) => node.setAttribute(key, value));
+  return node;
+};
+
 const renderGrid = (width, height) => {
-  const { top, right, bottom, left } = chartState.margin;
-  const yTicks = [-30, 0, 30, 60, 90, 120];
   chartRefs.grid.innerHTML = "";
 
-  const axisLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
-  axisLine.setAttribute("x1", left);
-  axisLine.setAttribute("x2", left);
-  axisLine.setAttribute("y1", top);
-  axisLine.setAttribute("y2", height - bottom);
-  axisLine.setAttribute("class", "chart-axis-line");
-  chartRefs.grid.appendChild(axisLine);
+  chartRefs.grid.appendChild(
+    createSvgNode("line", {
+      x1: chartState.margin.left,
+      x2: chartState.margin.left,
+      y1: chartState.margin.top,
+      y2: height - chartState.margin.bottom,
+      class: "chart-axis-line"
+    })
+  );
 
-  yTicks.forEach((tick) => {
+  chartState.ticks.y.forEach((tick) => {
     const y = getYForValue(tick, height);
-    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-    line.setAttribute("x1", left);
-    line.setAttribute("x2", width - right);
-    line.setAttribute("y1", y);
-    line.setAttribute("y2", y);
-    line.setAttribute("class", tick === 0 ? "chart-grid-line is-zero" : "chart-grid-line");
-    chartRefs.grid.appendChild(line);
-
-    const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    label.setAttribute("x", left - 12);
-    label.setAttribute("y", y + 6);
-    label.setAttribute("text-anchor", "end");
-    label.setAttribute("class", "chart-axis-label");
+    chartRefs.grid.appendChild(
+      createSvgNode("line", {
+        x1: chartState.margin.left,
+        x2: width - chartState.margin.right,
+        y1: y,
+        y2: y,
+        class: tick === 0 ? "chart-grid-line is-zero" : "chart-grid-line"
+      })
+    );
+    const label = createSvgNode("text", {
+      x: chartState.margin.left - 12,
+      y: y + 6,
+      "text-anchor": "end",
+      class: "chart-axis-label"
+    });
     label.textContent = `${tick}%`;
     chartRefs.grid.appendChild(label);
   });
 
-  xTickDates.forEach((tickDate) => {
-    const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    label.setAttribute("x", getXForTime(parseDate(tickDate).getTime(), width));
-    label.setAttribute("y", height - 12);
-    label.setAttribute("text-anchor", "middle");
-    label.setAttribute("class", "chart-axis-label");
+  chartState.ticks.x.forEach((tickDate) => {
+    const index = chartState.data.points.findIndex((point) => point.date === tickDate);
+    if (index === -1) {
+      return;
+    }
+    const label = createSvgNode("text", {
+      x: getXForIndex(index, width),
+      y: height - 12,
+      "text-anchor": "middle",
+      class: "chart-axis-label"
+    });
     label.textContent = tickDate;
     chartRefs.grid.appendChild(label);
   });
 };
 
-const findClosestPoint = (targetTime) => {
-  let low = 0;
-  let high = chartData.length - 1;
-
-  while (low < high) {
-    const mid = Math.floor((low + high) / 2);
-    if (chartData[mid].time < targetTime) {
-      low = mid + 1;
-    } else {
-      high = mid;
-    }
-  }
-
-  const current = chartData[low];
-  const previous = chartData[Math.max(low - 1, 0)];
-  return Math.abs(current.time - targetTime) < Math.abs(previous.time - targetTime) ? current : previous;
+const setSummaryValues = () => {
+  chartRefs.legendIndex.textContent = chartState.data.legend.index;
+  chartRefs.legendTotal.textContent = chartState.data.legend.total;
+  chartRefs.legendStock.textContent = chartState.data.legend.stock;
+  chartRefs.summaryIndex.textContent = chartState.data.summary.index;
+  chartRefs.summaryTotal.textContent = chartState.data.summary.total;
+  chartRefs.summaryStock.textContent = chartState.data.summary.stock;
+  chartRefs.summaryCash.textContent = chartState.data.summary.cash;
+  chartRefs.summaryBond.textContent = chartState.data.summary.bond;
 };
 
-const setTooltip = (point, x, width) => {
-  const lang = chartState.lang;
+const setTooltip = (point, index, rect) => {
+  const { width, height } = getChartSize();
+  const x = getXForIndex(index, width);
+  const scaledX = (x / width) * rect.width;
+
   chartRefs.tooltip.hidden = false;
   chartRefs.tooltipDate.textContent = point.date;
-  chartRefs.tooltipIndex.textContent = formatPercent(point.index);
-  chartRefs.tooltipTotal.textContent = formatPercent(point.total);
-  chartRefs.tooltipStock.textContent = formatPercent(point.stock);
-  chartRefs.tooltipTradesLabel.textContent = lang === "zh" ? "当日交易" : "Trades";
+  chartRefs.tooltipIndex.textContent = formatTooltipValue(point.index);
+  chartRefs.tooltipTotal.textContent = formatTooltipValue(point.total);
+  chartRefs.tooltipStock.textContent = formatTooltipValue(point.stock);
+  chartRefs.tooltipTradesLabel.textContent = translations[chartState.lang].tooltip_trades;
   chartRefs.tooltipTradesList.innerHTML = "";
 
-  const trades = point.trades.length
-    ? point.trades.map((trade) => formatTrade(trade, lang))
-    : [lang === "zh" ? "该日期未选取重点交易。" : "No highlighted trade on this date."];
+  const items = point.trades.length
+    ? point.trades.map((trade) => formatTrade(trade, chartState.lang))
+    : [translations[chartState.lang].tooltip_no_trades];
 
-  trades.forEach((trade) => {
-    const item = document.createElement("li");
-    item.textContent = trade;
-    chartRefs.tooltipTradesList.appendChild(item);
+  items.forEach((text) => {
+    const li = document.createElement("li");
+    li.textContent = text;
+    chartRefs.tooltipTradesList.appendChild(li);
   });
 
   const tooltipWidth = 286;
-  const tooltipLeft = Math.min(Math.max(x + 14, 16), width - tooltipWidth - 16);
-  chartRefs.tooltip.style.left = `${tooltipLeft}px`;
-  chartRefs.tooltip.style.top = "24px";
+  const left = Math.min(
+    Math.max(scaledX + 16, 14),
+    rect.width - tooltipWidth - 14
+  );
+  const yAnchor = getYForValue(Math.max(point.stock, point.total), height);
+  const top = Math.max(18, Math.min((yAnchor / height) * rect.height - 28, rect.height - 220));
+  chartRefs.tooltip.style.left = `${left}px`;
+  chartRefs.tooltip.style.top = `${top}px`;
+
+  chartRefs.hoverLine.hidden = false;
+  chartRefs.hoverLine.setAttribute("x1", x);
+  chartRefs.hoverLine.setAttribute("x2", x);
+  chartRefs.hoverLine.setAttribute("y1", chartState.margin.top);
+  chartRefs.hoverLine.setAttribute("y2", height - chartState.margin.bottom);
 };
 
-const renderChart = (lang) => {
-  chartState.lang = lang;
-  const viewBox = chartRefs.svg.viewBox.baseVal;
-  const width = viewBox.width;
-  const height = viewBox.height;
+const hideTooltip = () => {
+  chartRefs.tooltip.hidden = true;
+  chartRefs.hoverLine.hidden = true;
+  chartState.hoverIndex = null;
+};
 
+const updateHover = (event) => {
+  const rect = chartRefs.svg.getBoundingClientRect();
+  const { width } = getChartSize();
+  const relativeX = ((event.clientX - rect.left) / rect.width) * width;
+  const clamped = Math.min(
+    Math.max(relativeX - chartState.margin.left, 0),
+    getInnerWidth(width)
+  );
+  const ratio = clamped / getInnerWidth(width);
+  const index = Math.round(ratio * (chartState.data.points.length - 1));
+  chartState.hoverIndex = index;
+  setTooltip(chartState.data.points[index], index, rect);
+};
+
+const renderChart = () => {
+  if (!chartState.data) {
+    return;
+  }
+  const { width, height } = getChartSize();
   renderGrid(width, height);
+  chartRefs.indexArea.setAttribute("d", getAreaPath("index", width, height));
+  chartRefs.stockArea.setAttribute("d", getAreaPath("stock", width, height));
   chartRefs.indexLine.setAttribute("d", getSeriesPath("index", width, height));
   chartRefs.totalLine.setAttribute("d", getSeriesPath("total", width, height));
   chartRefs.stockLine.setAttribute("d", getSeriesPath("stock", width, height));
-  chartRefs.indexArea.setAttribute("d", getAreaPath("index", width, height));
-  chartRefs.stockArea.setAttribute("d", getAreaPath("stock", width, height));
+  setSummaryValues();
 
-  const last = chartData[chartData.length - 1];
-  chartRefs.legendIndex.textContent = formatPercent(last.index);
-  chartRefs.legendTotal.textContent = formatPercent(last.total);
-  chartRefs.legendStock.textContent = formatPercent(last.stock);
-
-  chartRefs.svg.onmousemove = (event) => {
-    const rect = chartRefs.svg.getBoundingClientRect();
-    const relativeX = ((event.clientX - rect.left) / rect.width) * width;
-    const clampedX = Math.min(Math.max(relativeX, chartState.margin.left), width - chartState.margin.right);
-    const ratio = (clampedX - chartState.margin.left) / (width - chartState.margin.left - chartState.margin.right);
-    const targetTime = chartStart.getTime() + ratio * totalSpan;
-    const point = findClosestPoint(targetTime);
-    const pointX = getXForTime(point.time, width);
-
-    chartRefs.hoverLine.hidden = false;
-    chartRefs.hoverLine.setAttribute("x1", pointX);
-    chartRefs.hoverLine.setAttribute("x2", pointX);
-    chartRefs.hoverLine.setAttribute("y1", chartState.margin.top);
-    chartRefs.hoverLine.setAttribute("y2", height - chartState.margin.bottom);
-    setTooltip(point, (pointX / width) * rect.width, rect.width);
-  };
-
-  chartRefs.svg.onmouseleave = () => {
-    chartRefs.hoverLine.hidden = true;
-    chartRefs.tooltip.hidden = true;
-  };
+  if (chartState.hoverIndex !== null) {
+    setTooltip(
+      chartState.data.points[chartState.hoverIndex],
+      chartState.hoverIndex,
+      chartRefs.svg.getBoundingClientRect()
+    );
+  }
 };
 
-const toggle = document.getElementById("lang-toggle");
-
-const updateLanguage = (lang) => {
+const applyLanguage = (lang) => {
+  chartState.lang = lang;
   document.body.dataset.lang = lang;
   document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-  document.title = lang === "zh" ? "牛作铭" : "Zuoming Niu";
-  document.querySelector('meta[name="description"]').setAttribute(
-    "content",
-    lang === "zh"
-      ? "牛作铭的个人主页，包含关于、金融、摄影与联系信息。"
-      : "Personal website of Zuoming Niu, with sections on about, finance, photography, and contact."
-  );
+  document.title = lang === "zh" ? "\u725b\u4f5c\u94ed" : "Zuoming Niu";
+  document
+    .querySelector('meta[name="description"]')
+    .setAttribute("content", translations[lang].description);
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
-    node.innerHTML = translations[lang][node.dataset.i18n];
+    node.textContent = translations[lang][node.dataset.i18n];
   });
 
-  toggle.textContent = lang === "en" ? "中文" : "EN";
-  renderChart(lang);
+  document.getElementById("lang-toggle").textContent = lang === "en" ? "\u4e2d\u6587" : "EN";
+
+  if (chartState.data) {
+    renderChart();
+  }
 };
 
-toggle.addEventListener("click", () => {
-  updateLanguage(document.body.dataset.lang === "en" ? "zh" : "en");
-});
+const bindEvents = () => {
+  chartRefs.svg.addEventListener("mousemove", updateHover);
+  chartRefs.svg.addEventListener("mouseleave", hideTooltip);
+  window.addEventListener("resize", () => {
+    if (chartState.data) {
+      renderChart();
+    }
+  });
+  document.getElementById("lang-toggle").addEventListener("click", () => {
+    applyLanguage(chartState.lang === "en" ? "zh" : "en");
+  });
+};
 
-updateLanguage("en");
+const loadChartData = async () => {
+  const response = await fetch("assets/finance/chart-data.json?v=20260321", {
+    cache: "no-store"
+  });
+  if (!response.ok) {
+    throw new Error(`Failed to load chart data: ${response.status}`);
+  }
+  return response.json();
+};
+
+const init = async () => {
+  bindEvents();
+  chartState.data = await loadChartData();
+  applyLanguage("en");
+  renderChart();
+};
+
+init().catch((error) => {
+  console.error(error);
+  hideTooltip();
+});

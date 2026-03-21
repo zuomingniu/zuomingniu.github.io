@@ -31,13 +31,13 @@
       </a>
 
       <div class="nav-tools">
-        <nav class="nav">
+        <nav class="nav" aria-label="Primary navigation">
           <a href="#about" data-i18n="nav_about">About</a>
           <a href="#finance" data-i18n="nav_finance">Finance</a>
           <a href="#photography" data-i18n="nav_photography">Photography</a>
           <a href="#contact" data-i18n="nav_contact">Contact</a>
         </nav>
-        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language">中文</button>
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
       </div>
     </div>
   </header>
@@ -54,9 +54,9 @@
             expect to graduate in July 2026.
           </p>
           <p data-i18n="about_p2">
-            From May to July 2025, I joined the NUS School of Computing Workshop and
-            worked on federated learning security. During the workshop, I contributed
-            to the paper "FL Breaker: Demonstrating Security Weaknesses of Federated Learning."
+            From May to July 2025, I joined the NUS School of Computing Workshop and worked
+            on federated learning security. During the workshop, I contributed to the paper
+            "FL Breaker: Demonstrating Security Weaknesses of Federated Learning."
           </p>
           <p data-i18n="about_p3">
             Beyond formal coursework, I keep a steady interest in finance and photography.
@@ -67,7 +67,11 @@
       </div>
 
       <aside class="hero-panel glass-card">
-        <img src="assets/头像.png" alt="Zuoming Niu portrait" class="avatar" />
+        <img
+          src="assets/%E5%A4%B4%E5%83%8F.png"
+          alt="Zuoming Niu portrait"
+          class="avatar"
+        />
       </aside>
     </section>
 
@@ -75,14 +79,17 @@
       <article class="glass-card section-card">
         <h2 data-i18n="finance_title">Finance</h2>
         <p data-i18n="finance_body">
-          This section is where I will continue adding notes on markets, companies, and data over time.
+          An interactive reconstruction of my two-year return curve using daily chart data and
+          brokerage records. Hover to inspect values and trades by date.
         </p>
+
         <div class="finance-card">
           <div class="finance-head">
             <h3 data-i18n="chart_title">Two-Year Return Comparison</h3>
             <a class="finance-link" href="#contact" data-i18n="chart_link">My holdings</a>
           </div>
-          <div class="finance-legend" id="finance-legend">
+
+          <div class="finance-legend">
             <div class="legend-item legend-index">
               <span class="legend-dot"></span>
               <span data-i18n="legend_index">CSI 300</span>
@@ -102,25 +109,44 @@
 
           <div class="chart-shell">
             <div class="chart-tooltip" id="chart-tooltip" hidden>
-              <p class="tooltip-date" id="tooltip-date"></p>
+              <p class="tooltip-date" id="tooltip-date">2024-05-03</p>
               <div class="tooltip-values">
-                <p><span class="tooltip-dot tooltip-dot-index"></span><span data-i18n="legend_index">CSI 300</span>: <strong id="tooltip-index"></strong></p>
-                <p><span class="tooltip-dot tooltip-dot-total"></span><span data-i18n="legend_total">Total Return</span>: <strong id="tooltip-total"></strong></p>
-                <p><span class="tooltip-dot tooltip-dot-stock"></span><span data-i18n="legend_stock">Stocks</span>: <strong id="tooltip-stock"></strong></p>
+                <p>
+                  <span class="tooltip-dot tooltip-dot-index"></span>
+                  <span data-i18n="legend_index">CSI 300</span>:
+                  <strong id="tooltip-index">0.75</strong>
+                </p>
+                <p>
+                  <span class="tooltip-dot tooltip-dot-total"></span>
+                  <span data-i18n="legend_total">Total Return</span>:
+                  <strong id="tooltip-total">0.36</strong>
+                </p>
+                <p>
+                  <span class="tooltip-dot tooltip-dot-stock"></span>
+                  <span data-i18n="legend_stock">Stocks</span>:
+                  <strong id="tooltip-stock">8.79</strong>
+                </p>
               </div>
               <div class="tooltip-trades">
-                <p class="tooltip-trades-label" id="tooltip-trades-label"></p>
+                <p class="tooltip-trades-label" id="tooltip-trades-label">Trades</p>
                 <ul id="tooltip-trades-list"></ul>
               </div>
             </div>
-            <svg class="finance-chart" id="finance-chart" viewBox="0 0 920 430" preserveAspectRatio="xMidYMid meet" aria-label="Interactive finance chart">
+
+            <svg
+              class="finance-chart"
+              id="finance-chart"
+              viewBox="0 0 920 430"
+              preserveAspectRatio="xMidYMid meet"
+              aria-label="Interactive finance chart"
+            >
               <defs>
                 <linearGradient id="stockAreaGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#ffb754" stop-opacity="0.45" />
+                  <stop offset="0%" stop-color="#ffb754" stop-opacity="0.48" />
                   <stop offset="100%" stop-color="#ffb754" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient id="indexAreaGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#4c79c6" stop-opacity="0.28" />
+                  <stop offset="0%" stop-color="#4c79c6" stop-opacity="0.34" />
                   <stop offset="100%" stop-color="#4c79c6" stop-opacity="0" />
                 </linearGradient>
               </defs>
@@ -146,27 +172,27 @@
             <div class="summary-item summary-item-index">
               <span class="summary-bullet"></span>
               <span data-i18n="summary_index_label">CSI 300</span>
-              <strong data-i18n="summary_index_value">-- +28.11%</strong>
+              <strong id="summary-index-value">-- +28.11%</strong>
             </div>
             <div class="summary-item summary-item-total">
               <span class="summary-bullet"></span>
               <span data-i18n="summary_total_label">Total Return</span>
-              <strong data-i18n="summary_total_value">+10,074.37 +6.44%</strong>
+              <strong id="summary-total-value">+10,074.37 +6.44%</strong>
             </div>
             <div class="summary-item summary-item-stock">
               <span class="summary-ring"></span>
               <span data-i18n="summary_stock_label">Stocks</span>
-              <strong data-i18n="summary_stock_value">+9,878.14 +6.97%</strong>
+              <strong id="summary-stock-value">+9,878.14 +6.97%</strong>
             </div>
             <div class="summary-item summary-item-cash">
               <span class="summary-ring summary-ring-muted"></span>
               <span data-i18n="summary_cash_label">Cash</span>
-              <strong data-i18n="summary_cash_value">+55.80 +0.18%</strong>
+              <strong id="summary-cash-value">+55.80 +0.18%</strong>
             </div>
             <div class="summary-item summary-item-bond">
               <span class="summary-ring summary-ring-muted"></span>
               <span data-i18n="summary_bond_label">Bonds</span>
-              <strong data-i18n="summary_bond_value">+140.43 +0.10%</strong>
+              <strong id="summary-bond-value">+140.43 +0.10%</strong>
             </div>
           </div>
         </div>
@@ -177,18 +203,24 @@
       <article class="glass-card section-card">
         <h2 data-i18n="photo_title">Photography</h2>
         <p data-i18n="photo_body">
-          This section is reserved for photographs, visual studies, and small observations from daily life.
+          Two photographs currently on display, with more work to be added over time.
         </p>
         <div class="photo-grid">
           <figure class="photo-card">
-            <img src="assets/photography/摄于2022.12.23 大连星海广场.jpg" alt="Xinghai Square, Dalian" />
+            <img
+              src="assets/photography/%E6%91%84%E4%BA%8E2022.12.23%20%E5%A4%A7%E8%BF%9E%E6%98%9F%E6%B5%B7%E5%B9%BF%E5%9C%BA.jpg"
+              alt="Xinghai Square, Dalian"
+            />
             <figcaption>
               <span data-i18n="photo_caption_1_title">Xinghai Square, Dalian</span>
               <span data-i18n="photo_caption_1_meta">December 23, 2022</span>
             </figcaption>
           </figure>
           <figure class="photo-card">
-            <img src="assets/photography/摄于2024.5.26 交大毕业晚会.jpg" alt="XJTU Graduation Gala" />
+            <img
+              src="assets/photography/%E6%91%84%E4%BA%8E2024.5.26%20%E4%BA%A4%E5%A4%A7%E6%AF%95%E4%B8%9A%E6%99%9A%E4%BC%9A.jpg"
+              alt="XJTU Graduation Gala"
+            />
             <figcaption>
               <span data-i18n="photo_caption_2_title">XJTU Graduation Gala</span>
               <span data-i18n="photo_caption_2_meta">May 26, 2024</span>
@@ -213,351 +245,10 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p data-i18n="footer">&copy; 2026 Zuoming Niu</p>
+      <p data-i18n="footer">© 2026 Zuoming Niu</p>
     </div>
   </footer>
 
-  <script type="application/json" id="legacy-inline-script">
-    const translations = {
-      en: {
-        nav_about: "About",
-        nav_finance: "Finance",
-        nav_photography: "Photography",
-        nav_contact: "Contact",
-        eyebrow: "About",
-        hero_name: "Zuoming Niu",
-        about_p1: "I am currently an undergraduate student in Computer Science and Technology (Experimental Class for Integrated Circuits) at Xi'an Jiaotong University, and expect to graduate in July 2026.",
-        about_p2: "From May to July 2025, I joined the NUS School of Computing Workshop and worked on federated learning security. During the workshop, I contributed to the paper \"FL Breaker: Demonstrating Security Weaknesses of Federated Learning.\"",
-        about_p3: "Beyond formal coursework, I keep a steady interest in finance and photography. Finance keeps me attentive to markets and information, while photography gives me a way to observe light, places, and everyday details with patience.",
-        finance_title: "Finance",
-        finance_body: "An interactive record of return curves and selected trades from my brokerage statement. Hover over the chart to inspect key buy and sell activity by date.",
-        chart_title: "Two-Year Return Comparison",
-        chart_link: "My holdings",
-        legend_index: "CSI 300",
-        legend_total: "Total Return",
-        legend_stock: "Stocks",
-        tab_month: "1M",
-        tab_year: "YTD",
-        tab_half: "6M",
-        tab_two_year: "2Y",
-        tab_custom: "Custom",
-        photo_title: "Photography",
-        photo_body: "Two photographs currently on display, with more work to be added over time.",
-        photo_caption_1_title: "Xinghai Square, Dalian",
-        photo_caption_1_meta: "December 23, 2022",
-        photo_caption_2_title: "XJTU Graduation Gala",
-        photo_caption_2_meta: "May 26, 2024",
-        contact_title: "Contact",
-        footer: "&copy; 2026 Zuoming Niu"
-      },
-      zh: {
-        nav_about: "关于",
-        nav_finance: "金融",
-        nav_photography: "摄影",
-        nav_contact: "联系",
-        eyebrow: "关于",
-        hero_name: "牛作铭",
-        about_p1: "我目前就读于西安交通大学计算机科学与技术（集成电路实验班），预计于 2026 年 7 月毕业。",
-        about_p2: "2025 年 5 月至 7 月，我参加了新加坡国立大学 School of Computing Workshop，并围绕联邦学习安全开展研究。在这一阶段，我参与了论文《FL Breaker: Demonstrating Security Weaknesses of Federated Learning》的写作。",
-        about_p3: "除了正式的学术训练之外，我也持续关注金融与摄影。金融让我保持对市场与信息的敏感，摄影则让我用更耐心的方式观察光线、场景与日常细节。",
-        finance_title: "金融",
-        finance_body: "这里展示收益曲线与从对账单中筛选出的重点交易记录。鼠标悬停到图表上即可查看对应日期的重要买卖操作。",
-        chart_title: "近两年收益对比",
-        chart_link: "我的股票",
-        legend_index: "沪深300",
-        legend_total: "总收益",
-        legend_stock: "股票",
-        tab_month: "本月",
-        tab_year: "今年",
-        tab_half: "近半年",
-        tab_two_year: "近两年",
-        tab_custom: "自定义",
-        photo_title: "摄影",
-        photo_body: "先展示两张摄影作品，后续会继续补充更多照片与视觉记录。",
-        photo_caption_1_title: "摄于大连星海广场",
-        photo_caption_1_meta: "2022年12月23日",
-        photo_caption_2_title: "摄于交大毕业晚会",
-        photo_caption_2_meta: "2024年5月26日",
-        contact_title: "联系",
-        footer: "&copy; 2026 牛作铭"
-      }
-    };
-
-    const chartData = [
-      { date: "2024-03-20", index: -2, total: 0, stock: 1, trades: [] },
-      { date: "2024-04-15", index: 1, total: 0.5, stock: 8, trades: [
-        { zh: "2024-02-29 买入 中国银行 500股，均价 4.45", en: "2024-02-29 Bought Bank of China, 500 shares at 4.45" },
-        { zh: "2024-03-01 买入 中国核电 200股，均价 8.54", en: "2024-03-01 Bought China National Nuclear Power, 200 shares at 8.54" },
-        { zh: "2024-04-08 卖出 中国核电 200股，均价 9.48", en: "2024-04-08 Sold China National Nuclear Power, 200 shares at 9.48" }
-      ] },
-      { date: "2024-05-03", index: 0.75, total: 0.36, stock: 8.79, trades: [] },
-      { date: "2024-06-09", index: -3, total: -4, stock: -6, trades: [] },
-      { date: "2024-07-12", index: -6, total: -12, stock: -18, trades: [
-        { zh: "2024-05-23 分两笔买入 恒生电子 共2800股，均价 21.15 / 21.01", en: "2024-05-23 Bought Hundsun Technologies in two fills, 2,800 shares total at 21.15 / 21.01" },
-        { zh: "2024-06-06 再买入 恒生电子 1600股，均价 19.50", en: "2024-06-06 Added Hundsun Technologies, 1,600 shares at 19.50" }
-      ] },
-      { date: "2024-08-29", index: -10, total: -21, stock: -24, trades: [] },
-      { date: "2024-09-18", index: 10, total: 12, stock: 18, trades: [] },
-      { date: "2024-10-12", index: 14, total: 36, stock: 40, trades: [] },
-      { date: "2024-11-18", index: 8, total: 33, stock: 37, trades: [
-        { zh: "2024-11-05 卖出 恒生电子 1400股，均价 29.15", en: "2024-11-05 Sold Hundsun Technologies, 1,400 shares at 29.15" },
-        { zh: "2024-11-05 卖出 恒生电子 3000股，均价 29.15", en: "2024-11-05 Sold Hundsun Technologies, 3,000 shares at 29.15" },
-        { zh: "2024-11-06 买入 立讯精密 1500股，均价 42.00", en: "2024-11-06 Bought Luxshare Precision, 1,500 shares at 42.00" },
-        { zh: "2024-11-22 再买入 立讯精密 1500股，均价 37.75", en: "2024-11-22 Added Luxshare Precision, 1,500 shares at 37.75" }
-      ] },
-      { date: "2024-12-20", index: 11, total: 47, stock: 50, trades: [
-        { zh: "2024-12-16 卖出 中国银行 500股，均价 5.28", en: "2024-12-16 Sold Bank of China, 500 shares at 5.28" }
-      ] },
-      { date: "2025-02-07", index: 10, total: 52, stock: 61, trades: [] },
-      { date: "2025-03-10", index: 12, total: 44, stock: 45, trades: [] },
-      { date: "2025-04-29", index: 4, total: 6, stock: 10, trades: [] },
-      { date: "2025-05-22", index: 7, total: 8, stock: 18, trades: [] },
-      { date: "2025-07-19", index: 12, total: 22, stock: 34, trades: [
-        { zh: "2025-07-15 买入 歌尔股份 500股，均价 22.44", en: "2025-07-15 Bought Goertek, 500 shares at 22.44" }
-      ] },
-      { date: "2025-08-24", index: 18, total: 38, stock: 68, trades: [] },
-      { date: "2025-09-18", index: 26, total: 61, stock: 98, trades: [
-        { zh: "2025-09-04 买入 比亚迪 100股，均价 104.80", en: "2025-09-04 Bought BYD, 100 shares at 104.80" },
-        { zh: "2025-09-11 卖出 立讯精密 1000股，均价 52.89", en: "2025-09-11 Sold Luxshare Precision, 1,000 shares at 52.89" },
-        { zh: "2025-09-15 卖出 歌尔股份 500股，均价 34.03", en: "2025-09-15 Sold Goertek, 500 shares at 34.03" },
-        { zh: "2025-09-19 卖出 立讯精密 共1000股，均价 55.20 / 55.69", en: "2025-09-19 Sold Luxshare Precision, 1,000 shares total at 55.20 / 55.69" },
-        { zh: "2025-09-19 买入 恒生电子 1000股，均价 33.49", en: "2025-09-19 Bought Hundsun Technologies, 1,000 shares at 33.49" }
-      ] },
-      { date: "2025-10-08", index: 29, total: 63, stock: 70, trades: [
-        { zh: "2025-10-10 买入 立讯精密 500股，均价 62.10", en: "2025-10-10 Bought Luxshare Precision, 500 shares at 62.10" },
-        { zh: "2025-10-10 买入 浪潮信息 500股，均价 71.85", en: "2025-10-10 Bought Inspur Electronic Information, 500 shares at 71.85" },
-        { zh: "2025-10-10 买入 歌尔股份 1000股，均价 36.50", en: "2025-10-10 Bought Goertek, 1,000 shares at 36.50" },
-        { zh: "2025-10-10 买入 豪威集团 200股，均价 142.50", en: "2025-10-10 Bought OmniVision-related position, 200 shares at 142.50" }
-      ] },
-      { date: "2025-11-15", index: 24, total: 42, stock: 55, trades: [
-        { zh: "2025-10-15 买入 立讯精密 500股，均价 54.00", en: "2025-10-15 Bought Luxshare Precision, 500 shares at 54.00" },
-        { zh: "2025-10-15 卖出 立讯精密 1000股，均价 58.23", en: "2025-10-15 Sold Luxshare Precision, 1,000 shares at 58.23" },
-        { zh: "2025-10-17 买入 立讯精密 500股，均价 55.81", en: "2025-10-17 Bought Luxshare Precision, 500 shares at 55.81" },
-        { zh: "2025-10-17 买入 歌尔股份 1000股，均价 31.17", en: "2025-10-17 Bought Goertek, 1,000 shares at 31.17" }
-      ] },
-      { date: "2025-12-28", index: 31, total: 48, stock: 64, trades: [
-        { zh: "2025-12-15 卖出 比亚迪 100股，均价 95.71", en: "2025-12-15 Sold BYD, 100 shares at 95.71" },
-        { zh: "2025-12-30 卖出 歌尔股份 2000股，均价 29.00", en: "2025-12-30 Sold Goertek, 2,000 shares at 29.00" },
-        { zh: "2025-12-31 卖出 豪威集团 200股，均价 127.08", en: "2025-12-31 Sold OmniVision-related position, 200 shares at 127.08" },
-        { zh: "2025-12-31 买入 合兴包装 10000股，均价 4.67", en: "2025-12-31 Bought Hexing Packaging, 10,000 shares at 4.67" }
-      ] },
-      { date: "2026-01-16", index: 30, total: 14, stock: 20, trades: [
-        { zh: "2026-01-06 卖出 立讯精密 共1500股，均价 58.60 / 59.45", en: "2026-01-06 Sold Luxshare Precision, 1,500 shares total at 58.60 / 59.45" },
-        { zh: "2026-01-06 买入 禾望电气 1600股，均价 32.80", en: "2026-01-06 Bought Hopewind Electric, 1,600 shares at 32.80" },
-        { zh: "2026-01-06 买入 凯撒旅业 8300股，均价 6.66", en: "2026-01-06 Bought Caesar Travel, 8,300 shares at 6.66" },
-        { zh: "2026-01-07 买入 鹭燕医药 1900股，均价 24.537", en: "2026-01-07 Bought Luyan Pharma, 1,900 shares at 24.537" },
-        { zh: "2026-01-07 买入 立讯精密 900股，均价 57.11", en: "2026-01-07 Bought Luxshare Precision, 900 shares at 57.11" }
-      ] },
-      { date: "2026-02-12", index: 30.5, total: 10, stock: 12, trades: [
-        { zh: "2026-01-12 卖出 南京熊猫 2300股，均价 19.93", en: "2026-01-12 Sold Nanjing Panda, 2,300 shares at 19.93" },
-        { zh: "2026-01-12 卖出 立讯精密 1400股，均价 55.38", en: "2026-01-12 Sold Luxshare Precision, 1,400 shares at 55.38" },
-        { zh: "2026-01-12 买入 鹭燕医药 2300股，均价 27.21", en: "2026-01-12 Bought Luyan Pharma, 2,300 shares at 27.21" },
-        { zh: "2026-01-13 买入 南京熊猫 3700股，均价 17.61", en: "2026-01-13 Bought Nanjing Panda, 3,700 shares at 17.61" }
-      ] },
-      { date: "2026-03-19", index: 28.11, total: 6.44, stock: 6.97, trades: [
-        { zh: "2026-03-03 买入 五洲新春 200股，均价 74.45", en: "2026-03-03 Bought Wuzhou Xinchun, 200 shares at 74.45" },
-        { zh: "2026-03-03 卖出 鹭燕医药 2400股，均价 14.98", en: "2026-03-03 Sold Luyan Pharma, 2,400 shares at 14.98" },
-        { zh: "2026-03-03 卖出 南京熊猫 2800股，均价 13.99", en: "2026-03-03 Sold Nanjing Panda, 2,800 shares at 13.99" },
-        { zh: "2026-03-10 买入 工业富联 400股，均价 53.93", en: "2026-03-10 Bought Foxconn Industrial Internet, 400 shares at 53.93" },
-        { zh: "2026-03-17 买入 五洲新春 300股，均价 71.43", en: "2026-03-17 Bought Wuzhou Xinchun, 300 shares at 71.43" }
-      ] }
-    ];
-
-    const chartRefs = {
-      svg: document.getElementById("finance-chart"),
-      grid: document.getElementById("chart-grid"),
-      indexLine: document.getElementById("index-line"),
-      totalLine: document.getElementById("total-line"),
-      stockLine: document.getElementById("stock-line"),
-      indexArea: document.getElementById("index-area"),
-      stockArea: document.getElementById("stock-area"),
-      hoverLine: document.getElementById("hover-line"),
-      points: document.getElementById("chart-points"),
-      tooltip: document.getElementById("chart-tooltip"),
-      tooltipDate: document.getElementById("tooltip-date"),
-      tooltipIndex: document.getElementById("tooltip-index"),
-      tooltipTotal: document.getElementById("tooltip-total"),
-      tooltipStock: document.getElementById("tooltip-stock"),
-      tooltipTradesLabel: document.getElementById("tooltip-trades-label"),
-      tooltipTradesList: document.getElementById("tooltip-trades-list"),
-      legendIndex: document.getElementById("legend-index-value"),
-      legendTotal: document.getElementById("legend-total-value"),
-      legendStock: document.getElementById("legend-stock-value")
-    };
-
-    const chartState = {
-      lang: "en",
-      minY: -30,
-      maxY: 120,
-      margin: { top: 24, right: 18, bottom: 42, left: 58 }
-    };
-
-    const formatPercent = (value) => `${value >= 0 ? "+" : ""}${value.toFixed(2)}%`;
-    const formatDate = (dateStr, lang) => {
-      const date = new Date(`${dateStr}T00:00:00`);
-      return lang === "zh"
-        ? `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`
-        : date.toLocaleDateString("en-CA");
-    };
-
-    const getSeriesPath = (seriesName, width, height) => {
-      const { top, right, bottom, left } = chartState.margin;
-      const innerWidth = width - left - right;
-      const innerHeight = height - top - bottom;
-      return chartData.map((point, index) => {
-        const x = left + (innerWidth * index) / (chartData.length - 1);
-        const y = top + ((chartState.maxY - point[seriesName]) / (chartState.maxY - chartState.minY)) * innerHeight;
-        return `${index === 0 ? "M" : "L"} ${x.toFixed(2)} ${y.toFixed(2)}`;
-      }).join(" ");
-    };
-
-    const getAreaPath = (seriesName, width, height) => {
-      const { top, right, bottom, left } = chartState.margin;
-      const innerWidth = width - left - right;
-      const innerHeight = height - top - bottom;
-      const baseline = top + ((chartState.maxY - 0) / (chartState.maxY - chartState.minY)) * innerHeight;
-      const points = chartData.map((point, index) => {
-        const x = left + (innerWidth * index) / (chartData.length - 1);
-        const y = top + ((chartState.maxY - point[seriesName]) / (chartState.maxY - chartState.minY)) * innerHeight;
-        return [x, y];
-      });
-      const first = points[0];
-      const last = points[points.length - 1];
-      const path = [`M ${first[0].toFixed(2)} ${baseline.toFixed(2)}`];
-      points.forEach(([x, y]) => path.push(`L ${x.toFixed(2)} ${y.toFixed(2)}`));
-      path.push(`L ${last[0].toFixed(2)} ${baseline.toFixed(2)}`);
-      path.push("Z");
-      return path.join(" ");
-    };
-
-    const renderGrid = (width, height, lang) => {
-      const { top, right, bottom, left } = chartState.margin;
-      const innerWidth = width - left - right;
-      const innerHeight = height - top - bottom;
-      const yTicks = [-30, 0, 30, 60, 90, 120];
-      const xTicks = [0, 3, 6, 10, 13, 16, 18, 20, 22];
-      chartRefs.grid.innerHTML = "";
-      yTicks.forEach((tick) => {
-        const y = top + ((chartState.maxY - tick) / (chartState.maxY - chartState.minY)) * innerHeight;
-        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        line.setAttribute("x1", left);
-        line.setAttribute("x2", width - right);
-        line.setAttribute("y1", y);
-        line.setAttribute("y2", y);
-        line.setAttribute("class", "chart-grid-line");
-        chartRefs.grid.appendChild(line);
-
-        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        label.setAttribute("x", left - 12);
-        label.setAttribute("y", y + 6);
-        label.setAttribute("text-anchor", "end");
-        label.setAttribute("class", "chart-axis-label");
-        label.textContent = `${tick}%`;
-        chartRefs.grid.appendChild(label);
-      });
-
-      xTicks.forEach((tickIndex) => {
-        const point = chartData[tickIndex];
-        const x = left + (innerWidth * tickIndex) / (chartData.length - 1);
-        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        label.setAttribute("x", x);
-        label.setAttribute("y", height - 12);
-        label.setAttribute("text-anchor", "middle");
-        label.setAttribute("class", "chart-axis-label");
-        label.textContent = formatDate(point.date, lang);
-        chartRefs.grid.appendChild(label);
-      });
-    };
-
-    const setTooltip = (point, x, width) => {
-      const lang = chartState.lang;
-      chartRefs.tooltip.hidden = false;
-      chartRefs.tooltipDate.textContent = formatDate(point.date, lang);
-      chartRefs.tooltipIndex.textContent = formatPercent(point.index);
-      chartRefs.tooltipTotal.textContent = formatPercent(point.total);
-      chartRefs.tooltipStock.textContent = formatPercent(point.stock);
-      chartRefs.tooltipTradesLabel.textContent = lang === "zh" ? "当日成交" : "Trades";
-      chartRefs.tooltipTradesList.innerHTML = "";
-      const trades = point.trades.length
-        ? point.trades.map((trade) => (typeof trade === "string" ? trade : trade[lang]))
-        : [lang === "zh" ? "该日期未选取重点交易" : "No highlighted trade on this date"];
-      trades.forEach((trade) => {
-        const li = document.createElement("li");
-        li.textContent = trade;
-        chartRefs.tooltipTradesList.appendChild(li);
-      });
-
-      const tooltipWidth = 240;
-      const left = Math.min(Math.max(x + 14, 16), width - tooltipWidth - 16);
-      chartRefs.tooltip.style.left = `${left}px`;
-      chartRefs.tooltip.style.top = `28px`;
-    };
-
-    const renderChart = (lang) => {
-      chartState.lang = lang;
-      const viewBox = chartRefs.svg.viewBox.baseVal;
-      const width = viewBox.width;
-      const height = viewBox.height;
-      renderGrid(width, height, lang);
-      chartRefs.indexLine.setAttribute("d", getSeriesPath("index", width, height));
-      chartRefs.totalLine.setAttribute("d", getSeriesPath("total", width, height));
-      chartRefs.stockLine.setAttribute("d", getSeriesPath("stock", width, height));
-      chartRefs.indexArea.setAttribute("d", getAreaPath("index", width, height));
-      chartRefs.stockArea.setAttribute("d", getAreaPath("stock", width, height));
-
-      const last = chartData[chartData.length - 1];
-      chartRefs.legendIndex.textContent = formatPercent(last.index);
-      chartRefs.legendTotal.textContent = formatPercent(last.total);
-      chartRefs.legendStock.textContent = formatPercent(last.stock);
-
-      chartRefs.points.innerHTML = "";
-      chartRefs.svg.onmousemove = (event) => {
-        const rect = chartRefs.svg.getBoundingClientRect();
-        const { left, right } = chartState.margin;
-        const innerWidth = width - left - right;
-        const relativeX = ((event.clientX - rect.left) / rect.width) * width;
-        const clamped = Math.min(Math.max(relativeX - left, 0), innerWidth);
-        const ratio = clamped / innerWidth;
-        const index = Math.round(ratio * (chartData.length - 1));
-        const point = chartData[index];
-        const x = left + (innerWidth * index) / (chartData.length - 1);
-        chartRefs.hoverLine.hidden = false;
-        chartRefs.hoverLine.setAttribute("x1", x);
-        chartRefs.hoverLine.setAttribute("x2", x);
-        chartRefs.hoverLine.setAttribute("y1", chartState.margin.top);
-        chartRefs.hoverLine.setAttribute("y2", height - chartState.margin.bottom);
-        setTooltip(point, ((x / width) * rect.width), rect.width);
-      };
-      chartRefs.svg.onmouseleave = () => {
-        chartRefs.hoverLine.hidden = true;
-        chartRefs.tooltip.hidden = true;
-      };
-    };
-
-    const toggle = document.getElementById("lang-toggle");
-    const updateLanguage = (lang) => {
-      document.body.dataset.lang = lang;
-      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-      document.title = lang === "zh" ? "牛作铭" : "Zuoming Niu";
-      document.querySelector('meta[name="description"]').setAttribute(
-        "content",
-        lang === "zh"
-          ? "牛作铭的个人主页，包含关于我、金融、摄影与联系信息。"
-          : "Personal website of Zuoming Niu, with sections on about, finance, photography, and contact."
-      );
-      document.querySelectorAll("[data-i18n]").forEach((node) => {
-        node.innerHTML = translations[lang][node.dataset.i18n];
-      });
-      toggle.textContent = lang === "en" ? "中文" : "EN";
-      renderChart(lang);
-    };
-
-    toggle.addEventListener("click", () => {
-      updateLanguage(document.body.dataset.lang === "en" ? "zh" : "en");
-    });
-
-    updateLanguage("en");
-  </script>
-  <script src="site.js"></script>
+  <script src="site.js" defer></script>
 </body>
 </html>

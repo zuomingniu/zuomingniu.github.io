@@ -309,6 +309,7 @@ button {
   min-height: 430px;
   display: block;
   shape-rendering: geometricPrecision;
+  cursor: crosshair;
 }
 
 .chart-grid-line {
@@ -382,6 +383,7 @@ button {
   color: white;
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.24);
   overflow: auto;
+  pointer-events: none;
 }
 
 .tooltip-date {
@@ -404,6 +406,11 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.tooltip-values strong {
+  color: #ffffff;
+  font-weight: 800;
 }
 
 .tooltip-trades {
