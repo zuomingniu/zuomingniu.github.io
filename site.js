@@ -121,8 +121,7 @@ const chartState = {
   hoverIndex: null,
   ticks: {
     x: [
-      "2024-03-20",
-      "2024-06-09",
+      "2024-05-23",
       "2024-08-29",
       "2024-11-18",
       "2025-02-07",
@@ -130,7 +129,7 @@ const chartState = {
       "2025-07-19",
       "2025-10-08",
       "2025-12-28",
-      "2026-03-19"
+      "2026-03-10"
     ],
     y: [-30, 0, 30, 60, 90, 120]
   },
@@ -266,8 +265,12 @@ const setSummaryValues = () => {
   chartRefs.summaryIndex.textContent = chartState.data.summary.index;
   chartRefs.summaryTotal.textContent = chartState.data.summary.total;
   chartRefs.summaryStock.textContent = chartState.data.summary.stock;
-  chartRefs.summaryCash.textContent = chartState.data.summary.cash;
-  chartRefs.summaryBond.textContent = chartState.data.summary.bond;
+  if (chartRefs.summaryCash && chartState.data.summary.cash) {
+    chartRefs.summaryCash.textContent = chartState.data.summary.cash;
+  }
+  if (chartRefs.summaryBond && chartState.data.summary.bond) {
+    chartRefs.summaryBond.textContent = chartState.data.summary.bond;
+  }
 };
 
 const setTooltip = (point, index, rect) => {
@@ -293,15 +296,13 @@ const setTooltip = (point, index, rect) => {
     chartRefs.tooltipTradesList.appendChild(li);
   });
 
-  const tooltipWidth = 286;
+  const tooltipWidth = 340;
   const left = Math.min(
     Math.max(scaledX + 16, 14),
     rect.width - tooltipWidth - 14
   );
-  const yAnchor = getYForValue(Math.max(point.stock, point.total), height);
-  const top = Math.max(18, Math.min((yAnchor / height) * rect.height - 28, rect.height - 220));
   chartRefs.tooltip.style.left = `${left}px`;
-  chartRefs.tooltip.style.top = `${top}px`;
+  chartRefs.tooltip.style.top = "18px";
 
   chartRefs.hoverLine.hidden = false;
   chartRefs.hoverLine.setAttribute("x1", x);

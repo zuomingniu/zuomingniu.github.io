@@ -238,9 +238,7 @@ button {
 
 .finance-head {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
-  gap: 16px;
   margin-bottom: 18px;
 }
 
@@ -375,14 +373,13 @@ button {
 .chart-tooltip {
   position: absolute;
   z-index: 4;
-  width: 286px;
-  max-height: 272px;
+  width: 340px;
   padding: 16px 18px;
   border-radius: 18px;
   background: rgba(48, 49, 56, 0.93);
   color: white;
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.24);
-  overflow: auto;
+  overflow: visible;
   pointer-events: none;
 }
 
@@ -434,42 +431,12 @@ button {
   color: rgba(255, 255, 255, 0.96);
 }
 
-.finance-tabs {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-top: 22px;
-  overflow: hidden;
-  border-radius: 18px;
-  border: 1px solid rgba(117, 103, 126, 0.12);
-  background: rgba(255, 255, 255, 0.76);
-}
-
-.finance-tab {
-  min-height: 64px;
-  border: 0;
-  background: transparent;
-  color: #5b5665;
-  font-size: 0.98rem;
-  font-weight: 700;
-  pointer-events: none;
-}
-
-.finance-tab + .finance-tab {
-  border-left: 1px solid rgba(117, 103, 126, 0.12);
-}
-
-.finance-tab.is-active {
-  background: rgba(45, 44, 52, 0.08);
-  color: #26212b;
-}
-
 .finance-summary {
   display: flex;
   flex-wrap: wrap;
   gap: 18px 34px;
   align-items: center;
-  margin-top: 22px;
-  padding-top: 18px;
+  margin-top: 26px;
 }
 
 .summary-item {
@@ -646,15 +613,6 @@ button {
   .nav-tools {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .finance-tabs {
-    grid-template-columns: 1fr;
-  }
-
-  .finance-tab + .finance-tab {
-    border-left: 0;
-    border-top: 1px solid rgba(117, 103, 126, 0.12);
   }
 
 }
