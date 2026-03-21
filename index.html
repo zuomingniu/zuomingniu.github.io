@@ -80,7 +80,6 @@
         <div class="finance-card">
           <div class="finance-head">
             <h3 data-i18n="chart_title">Two-Year Return Comparison</h3>
-            <a class="finance-link" href="#contact" data-i18n="chart_link">My holdings</a>
           </div>
           <div class="finance-legend" id="finance-legend">
             <div class="legend-item legend-index">
@@ -113,7 +112,7 @@
                 <ul id="tooltip-trades-list"></ul>
               </div>
             </div>
-            <svg class="finance-chart" id="finance-chart" viewBox="0 0 920 430" preserveAspectRatio="none" aria-label="Interactive finance chart">
+            <svg class="finance-chart" id="finance-chart" viewBox="0 0 920 430" preserveAspectRatio="xMidYMid meet" aria-label="Interactive finance chart">
               <defs>
                 <linearGradient id="stockAreaGradient" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stop-color="#ffb754" stop-opacity="0.45" />
@@ -131,16 +130,7 @@
               <path id="total-line" class="chart-line chart-line-total"></path>
               <path id="stock-line" class="chart-line chart-line-stock"></path>
               <line id="hover-line" class="hover-line" x1="0" y1="0" x2="0" y2="0" hidden></line>
-              <g id="chart-points"></g>
             </svg>
-          </div>
-
-          <div class="finance-tabs">
-            <button class="finance-tab" type="button" data-i18n="tab_month">1M</button>
-            <button class="finance-tab" type="button" data-i18n="tab_year">YTD</button>
-            <button class="finance-tab" type="button" data-i18n="tab_half">6M</button>
-            <button class="finance-tab is-active" type="button" data-i18n="tab_two_year">2Y</button>
-            <button class="finance-tab" type="button" data-i18n="tab_custom">Custom</button>
           </div>
         </div>
       </article>

@@ -124,47 +124,30 @@ const tradeCatalog = [
 ];
 
 const chartAnchors = [
-  { date: "2024-03-20", index: -1.2, total: 0.1, stock: 1.3 },
-  { date: "2024-04-15", index: 0.4, total: 0.4, stock: 8.2 },
+  { date: "2024-03-20", index: -1.5, total: 0.1, stock: 1.0 },
+  { date: "2024-04-08", index: 0.8, total: 0.8, stock: 8.0 },
   { date: "2024-05-03", index: 0.75, total: 0.36, stock: 8.79 },
-  { date: "2024-06-09", index: -1.4, total: -3.8, stock: -5.6 },
-  { date: "2024-07-10", index: -5.6, total: -13.2, stock: -19.6 },
-  { date: "2024-08-15", index: -8.2, total: -20.4, stock: -23.1 },
-  { date: "2024-08-29", index: -10.0, total: -21.0, stock: -20.5 },
-  { date: "2024-09-06", index: -9.2, total: -20.5, stock: -19.8 },
-  { date: "2024-09-12", index: 9.5, total: 11.5, stock: 34.0 },
-  { date: "2024-09-18", index: 10.0, total: 12.0, stock: 18.0 },
-  { date: "2024-10-07", index: 14.2, total: 35.5, stock: 40.2 },
-  { date: "2024-10-21", index: 8.4, total: 33.0, stock: 37.2 },
-  { date: "2024-11-05", index: 12.4, total: 42.5, stock: 46.8 },
-  { date: "2024-11-18", index: 8.0, total: 34.5, stock: 37.5 },
-  { date: "2024-12-10", index: 4.8, total: 43.5, stock: 46.5 },
-  { date: "2025-01-08", index: 6.1, total: 45.8, stock: 49.2 },
-  { date: "2025-02-07", index: 10.0, total: 52.0, stock: 61.0 },
-  { date: "2025-03-10", index: 12.0, total: 44.0, stock: 45.0 },
-  { date: "2025-04-01", index: 11.0, total: 45.0, stock: 44.0 },
-  { date: "2025-04-10", index: 0.0, total: 2.0, stock: 1.0 },
-  { date: "2025-04-18", index: 5.8, total: 6.0, stock: 13.0 },
-  { date: "2025-04-29", index: 4.0, total: 6.0, stock: 10.0 },
-  { date: "2025-05-22", index: 7.0, total: 8.0, stock: 18.0 },
-  { date: "2025-06-20", index: 8.0, total: 14.5, stock: 24.0 },
-  { date: "2025-07-19", index: 12.0, total: 22.0, stock: 34.0 },
-  { date: "2025-08-10", index: 15.0, total: 20.5, stock: 31.0 },
-  { date: "2025-08-28", index: 19.0, total: 37.0, stock: 68.0 },
-  { date: "2025-09-05", index: 23.0, total: 50.0, stock: 78.0 },
-  { date: "2025-09-18", index: 28.0, total: 62.0, stock: 98.0 },
-  { date: "2025-10-08", index: 29.0, total: 63.0, stock: 97.0 },
-  { date: "2025-10-18", index: 30.0, total: 50.0, stock: 56.0 },
-  { date: "2025-10-28", index: 27.0, total: 60.0, stock: 72.0 },
-  { date: "2025-11-15", index: 24.0, total: 42.0, stock: 55.0 },
-  { date: "2025-11-30", index: 27.0, total: 50.0, stock: 57.0 },
-  { date: "2025-12-15", index: 25.0, total: 47.0, stock: 50.0 },
-  { date: "2025-12-28", index: 31.0, total: 48.0, stock: 64.0 },
-  { date: "2026-01-05", index: 30.5, total: 31.0, stock: 16.0 },
-  { date: "2026-01-16", index: 30.0, total: 14.0, stock: 20.0 },
-  { date: "2026-02-01", index: 30.5, total: 10.0, stock: 12.0 },
-  { date: "2026-02-20", index: 30.2, total: 9.0, stock: 11.0 },
-  { date: "2026-03-05", index: 30.7, total: 8.6, stock: 9.6 },
+  { date: "2024-06-09", index: -2.0, total: -4.0, stock: -6.0 },
+  { date: "2024-07-02", index: -5.0, total: -12.0, stock: -18.0 },
+  { date: "2024-07-31", index: -8.0, total: -20.0, stock: -24.0 },
+  { date: "2024-08-29", index: -10.0, total: -21.0, stock: -21.0 },
+  { date: "2024-09-12", index: 10.0, total: 12.0, stock: 18.0 },
+  { date: "2024-10-07", index: 14.0, total: 36.0, stock: 40.0 },
+  { date: "2024-10-21", index: 8.0, total: 33.0, stock: 37.0 },
+  { date: "2024-11-18", index: 11.0, total: 48.0, stock: 61.0 },
+  { date: "2024-12-12", index: 10.0, total: 44.0, stock: 45.0 },
+  { date: "2025-02-07", index: 12.0, total: 52.0, stock: 61.0 },
+  { date: "2025-03-10", index: 4.0, total: 6.0, stock: 10.0 },
+  { date: "2025-04-29", index: 7.0, total: 8.0, stock: 18.0 },
+  { date: "2025-05-22", index: 8.0, total: 18.0, stock: 35.0 },
+  { date: "2025-07-10", index: 18.0, total: 38.0, stock: 68.0 },
+  { date: "2025-08-18", index: 26.0, total: 61.0, stock: 98.0 },
+  { date: "2025-09-18", index: 29.0, total: 63.0, stock: 70.0 },
+  { date: "2025-10-10", index: 24.0, total: 42.0, stock: 55.0 },
+  { date: "2025-11-15", index: 31.0, total: 49.0, stock: 64.0 },
+  { date: "2025-12-18", index: 30.5, total: 14.0, stock: 20.0 },
+  { date: "2026-01-16", index: 30.0, total: 10.0, stock: 12.0 },
+  { date: "2026-02-20", index: 30.6, total: 8.4, stock: 9.2 },
   { date: "2026-03-19", index: 28.11, total: 6.44, stock: 6.97 }
 ];
 
@@ -247,31 +230,9 @@ const anchors = chartAnchors
   .map((point) => ({ ...point, time: parseDate(point.date).getTime() }))
   .sort((a, b) => a.time - b.time);
 
-const interpolateValue = (time, key) => {
-  if (time <= anchors[0].time) {
-    return anchors[0][key];
-  }
-  if (time >= anchors[anchors.length - 1].time) {
-    return anchors[anchors.length - 1][key];
-  }
-
-  for (let index = 0; index < anchors.length - 1; index += 1) {
-    const current = anchors[index];
-    const next = anchors[index + 1];
-    if (time >= current.time && time <= next.time) {
-      const ratio = (time - current.time) / (next.time - current.time);
-      const base = current[key] + (next[key] - current[key]) * ratio;
-      const spanDays = (next.time - current.time) / DAY_MS;
-      const amplitudeMap = { index: 0.7, total: 1.3, stock: 2.2 };
-      const delta = Math.abs(next[key] - current[key]);
-      const amplitude = Math.min(amplitudeMap[key] + delta * 0.035, amplitudeMap[key] * 2.2);
-      const wave = Math.sin((time / DAY_MS) * 0.9 + index * 0.8) + 0.5 * Math.cos((time / DAY_MS) * 1.6 + index * 1.4);
-      const wiggle = spanDays >= 7 ? wave * amplitude * Math.sin(Math.PI * ratio) * 0.28 : 0;
-      return Number((base + wiggle).toFixed(2));
-    }
-  }
-
-  return 0;
+const seededNoise = (seed) => {
+  const raw = Math.sin(seed * 12.9898 + 78.233) * 43758.5453;
+  return raw - Math.floor(raw);
 };
 
 const generateTradingDays = (start, end) => {
@@ -287,17 +248,59 @@ const generateTradingDays = (start, end) => {
 };
 
 const tradingDates = generateTradingDays(chartStart, chartEnd);
-const chartData = tradingDates.map((date) => {
-  const time = parseDate(date).getTime();
-  return {
-    date,
-    time,
-    index: interpolateValue(time, "index"),
-    total: interpolateValue(time, "total"),
-    stock: interpolateValue(time, "stock"),
-    trades: tradeRecords[date] || []
-  };
-});
+
+const buildSeriesValues = (seriesName) => {
+  const values = new Map();
+  const seriesOffset = { index: 17, total: 43, stock: 79 }[seriesName];
+
+  for (let segmentIndex = 0; segmentIndex < anchors.length - 1; segmentIndex += 1) {
+    const current = anchors[segmentIndex];
+    const next = anchors[segmentIndex + 1];
+    const segmentDates = tradingDates.filter((date) => date >= current.date && date <= next.date);
+    if (!segmentDates.length) {
+      continue;
+    }
+
+    const startValue = current[seriesName];
+    const endValue = next[seriesName];
+    const steps = segmentDates.length - 1;
+    const walk = new Array(segmentDates.length).fill(0);
+    let cumulative = 0;
+    const volatilityBase = { index: 0.32, total: 0.58, stock: 0.92 }[seriesName];
+    const volatility = Math.min(volatilityBase + Math.abs(endValue - startValue) * 0.014, volatilityBase * 3.1);
+
+    for (let index = 1; index < segmentDates.length; index += 1) {
+      cumulative += (seededNoise(seriesOffset * 1000 + segmentIndex * 131 + index * 17) - 0.5) * volatility;
+      walk[index] = cumulative;
+    }
+
+    const finalOffset = walk[walk.length - 1];
+
+    segmentDates.forEach((date, index) => {
+      const ratio = steps === 0 ? 0 : index / steps;
+      const linear = startValue + (endValue - startValue) * ratio;
+      const bridge = walk[index] - finalOffset * ratio;
+      const envelope = Math.sin(Math.PI * ratio);
+      const value = Number((linear + bridge * envelope).toFixed(2));
+      values.set(date, value);
+    });
+  }
+
+  return values;
+};
+
+const indexValues = buildSeriesValues("index");
+const totalValues = buildSeriesValues("total");
+const stockValues = buildSeriesValues("stock");
+
+const chartData = tradingDates.map((date) => ({
+  date,
+  time: parseDate(date).getTime(),
+  index: indexValues.get(date),
+  total: totalValues.get(date),
+  stock: stockValues.get(date),
+  trades: tradeRecords[date] || []
+}));
 
 const getXForTime = (time, width) => {
   const { left, right } = chartState.margin;

@@ -238,9 +238,7 @@ button {
 
 .finance-head {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
-  gap: 16px;
   margin-bottom: 18px;
 }
 
@@ -308,6 +306,7 @@ button {
   height: auto;
   min-height: 430px;
   display: block;
+  shape-rendering: geometricPrecision;
 }
 
 .chart-grid-line {
@@ -349,6 +348,7 @@ button {
   stroke-width: 3;
   stroke-linejoin: round;
   stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
 }
 
 .chart-line-index {
@@ -366,6 +366,7 @@ button {
 .hover-line {
   stroke: rgba(61, 60, 69, 0.54);
   stroke-width: 1.15;
+  vector-effect: non-scaling-stroke;
 }
 
 .chart-tooltip {
@@ -422,33 +423,6 @@ button {
   gap: 6px;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.96);
-}
-
-.finance-tabs {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0;
-  margin-top: 18px;
-  overflow: hidden;
-  border-radius: 18px;
-  border: 1px solid rgba(117, 103, 126, 0.12);
-}
-
-.finance-tab {
-  min-height: 56px;
-  border: 0;
-  background: rgba(255, 255, 255, 0.68);
-  color: #5b5665;
-  font-weight: 700;
-}
-
-.finance-tab + .finance-tab {
-  border-left: 1px solid rgba(117, 103, 126, 0.12);
-}
-
-.finance-tab.is-active {
-  background: rgba(45, 44, 52, 0.1);
-  color: #26212b;
 }
 
 .photo-grid {
@@ -584,12 +558,4 @@ button {
     align-items: flex-start;
   }
 
-  .finance-tabs {
-    grid-template-columns: 1fr;
-  }
-
-  .finance-tab + .finance-tab {
-    border-left: 0;
-    border-top: 1px solid rgba(117, 103, 126, 0.12);
-  }
 }
