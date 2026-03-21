@@ -10,9 +10,9 @@ const translations = {
     about_p2: "From May to July 2025, I joined the NUS School of Computing Workshop and worked on federated learning security. During the workshop, I contributed to the paper \"FL Breaker: Demonstrating Security Weaknesses of Federated Learning.\"",
     about_p3: "Beyond formal coursework, I keep a steady interest in finance and photography. Finance keeps me attentive to markets and information, while photography gives me a way to observe light, places, and everyday details with patience.",
     finance_title: "Finance",
-    finance_body: "A two-year return chart rebuilt at trading-day resolution from my statement. Hover over each date to inspect selected trades and how they align with the curve.",
+    finance_body: "A trading-day return chart reconstructed to match the reference layout as closely as possible.",
     chart_title: "Two-Year Return Comparison",
-    chart_link: "My holdings",
+    chart_link: "My holdings ›",
     legend_index: "CSI 300",
     legend_total: "Total Return",
     legend_stock: "Stocks",
@@ -21,6 +21,16 @@ const translations = {
     tab_half: "6M",
     tab_two_year: "2Y",
     tab_custom: "Custom",
+    summary_index_label: "CSI 300",
+    summary_index_value: "-- +28.11%",
+    summary_total_label: "Total Return",
+    summary_total_value: "+10,074.37 +6.44%",
+    summary_stock_label: "Stocks",
+    summary_stock_value: "+9,878.14 +6.97%",
+    summary_cash_label: "Cash",
+    summary_cash_value: "+55.80 +0.18%",
+    summary_bond_label: "Bonds",
+    summary_bond_value: "+140.43 +0.10%",
     photo_title: "Photography",
     photo_body: "Two photographs currently on display, with more work to be added over time.",
     photo_caption_1_title: "Xinghai Square, Dalian",
@@ -41,9 +51,9 @@ const translations = {
     about_p2: "2025 年 5 月至 7 月，我参加了新加坡国立大学 School of Computing Workshop，围绕联邦学习安全开展研究，并参与论文《FL Breaker: Demonstrating Security Weaknesses of Federated Learning》的写作。",
     about_p3: "除正式课程之外，我也持续关注金融与摄影。金融让我保持对市场与信息的敏感，摄影则让我更耐心地观察光线、场景与日常细节。",
     finance_title: "金融",
-    finance_body: "这里展示依据对账单重建的近两年交易日收益曲线。鼠标悬停到任意日期时，可以查看当天匹配到的重点交易记录。",
+    finance_body: "这里展示按交易日重建的近两年收益曲线，并尽量贴近你给出的参考图表。",
     chart_title: "近两年收益对比",
-    chart_link: "我的股票",
+    chart_link: "我的股票 ›",
     legend_index: "沪深300",
     legend_total: "总收益",
     legend_stock: "股票",
@@ -52,6 +62,16 @@ const translations = {
     tab_half: "近半年",
     tab_two_year: "近两年",
     tab_custom: "自定义",
+    summary_index_label: "沪深300",
+    summary_index_value: "-- +28.11%",
+    summary_total_label: "总收益",
+    summary_total_value: "+10,074.37 +6.44%",
+    summary_stock_label: "股票",
+    summary_stock_value: "+9,878.14 +6.97%",
+    summary_cash_label: "现金",
+    summary_cash_value: "+55.80 +0.18%",
+    summary_bond_label: "债券",
+    summary_bond_value: "+140.43 +0.10%",
     photo_title: "摄影",
     photo_body: "先展示两张摄影作品，后续会继续补充更多照片与视觉记录。",
     photo_caption_1_title: "摄于大连星海广场",
@@ -83,73 +103,85 @@ const tradeCatalog = [
   { date: "2025-10-10", action: "buy", stockZh: "浪潮信息", stockEn: "Inspur Information", code: "000977", quantity: 500, prices: ["71.85"] },
   { date: "2025-10-10", action: "buy", stockZh: "歌尔股份", stockEn: "Goertek", code: "002241", quantity: 1000, prices: ["36.50"] },
   { date: "2025-10-10", action: "buy", stockZh: "豪威集团", stockEn: "Will Semiconductor", code: "603501", quantity: 200, prices: ["142.50"] },
-  { date: "2025-10-13", action: "sell", stockZh: "浪潮信息", stockEn: "Inspur Information", code: "000977", quantity: 500, prices: ["69.65"] },
-  { date: "2025-10-15", action: "buy", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 500, prices: ["54.00"] },
-  { date: "2025-10-15", action: "sell", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 1000, prices: ["58.23"] },
-  { date: "2025-10-17", action: "buy", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 500, prices: ["55.81"] },
-  { date: "2025-10-17", action: "buy", stockZh: "歌尔股份", stockEn: "Goertek", code: "002241", quantity: 1000, prices: ["31.17"] },
-  { date: "2025-12-15", action: "sell", stockZh: "比亚迪", stockEn: "BYD", code: "002594", quantity: 100, prices: ["95.71"] },
-  { date: "2025-12-30", action: "sell", stockZh: "歌尔股份", stockEn: "Goertek", code: "002241", quantity: 2000, prices: ["29.00"] },
-  { date: "2025-12-31", action: "sell", stockZh: "豪威集团", stockEn: "Will Semiconductor", code: "603501", quantity: 200, prices: ["127.08"] },
   { date: "2025-12-31", action: "buy", stockZh: "合兴包装", stockEn: "Hexing Packaging", code: "002228", quantity: 10000, prices: ["4.67"] },
-  { date: "2026-01-05", action: "sell", stockZh: "恒生电子", stockEn: "Hundsun Technologies", code: "600570", quantity: 1000, prices: ["30.73"] },
-  { date: "2026-01-06", action: "sell", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 1500, prices: ["58.60", "59.45"] },
   { date: "2026-01-06", action: "buy", stockZh: "禾望电气", stockEn: "Hopewind Electric", code: "603063", quantity: 1600, prices: ["32.80"] },
-  { date: "2026-01-06", action: "buy", stockZh: "凯撒旅业", stockEn: "Caesar Travel", code: "000796", quantity: 8300, prices: ["6.66"] },
   { date: "2026-01-07", action: "buy", stockZh: "鹭燕医药", stockEn: "Luyan Pharma", code: "002788", quantity: 1900, prices: ["24.537"] },
-  { date: "2026-01-07", action: "sell", stockZh: "禾望电气", stockEn: "Hopewind Electric", code: "603063", quantity: 1600, prices: ["33.63"] },
-  { date: "2026-01-07", action: "sell", stockZh: "凯撒旅业", stockEn: "Caesar Travel", code: "000796", quantity: 8300, prices: ["6.69"] },
-  { date: "2026-01-07", action: "buy", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 900, prices: ["57.11"] },
-  { date: "2026-01-07", action: "sell", stockZh: "合兴包装", stockEn: "Hexing Packaging", code: "002228", quantity: 10000, prices: ["4.77"] },
-  { date: "2026-01-08", action: "buy", stockZh: "鹭燕医药", stockEn: "Luyan Pharma", code: "002788", quantity: 1400, prices: ["24.98"] },
   { date: "2026-01-08", action: "buy", stockZh: "南京熊猫", stockEn: "Nanjing Panda", code: "600775", quantity: 2300, prices: ["17.00"] },
-  { date: "2026-01-08", action: "buy", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 500, prices: ["55.04"] },
-  { date: "2026-01-12", action: "sell", stockZh: "南京熊猫", stockEn: "Nanjing Panda", code: "600775", quantity: 2300, prices: ["19.93"] },
-  { date: "2026-01-12", action: "sell", stockZh: "立讯精密", stockEn: "Luxshare Precision", code: "002475", quantity: 1400, prices: ["55.38"] },
-  { date: "2026-01-12", action: "buy", stockZh: "鹭燕医药", stockEn: "Luyan Pharma", code: "002788", quantity: 2300, prices: ["27.21"] },
-  { date: "2026-01-13", action: "buy", stockZh: "南京熊猫", stockEn: "Nanjing Panda", code: "600775", quantity: 3700, prices: ["17.61"] },
-  { date: "2026-01-30", action: "sell", stockZh: "鹭燕医药", stockEn: "Luyan Pharma", code: "002788", quantity: 2800, prices: ["15.81"] },
-  { date: "2026-01-30", action: "buy", stockZh: "鹭燕医药", stockEn: "Luyan Pharma", code: "002788", quantity: 2300, prices: ["15.65"] },
-  { date: "2026-02-02", action: "sell", stockZh: "南京熊猫", stockEn: "Nanjing Panda", code: "600775", quantity: 900, prices: ["14.18"] },
-  { date: "2026-02-03", action: "sell", stockZh: "鹭燕医药", stockEn: "Luyan Pharma", code: "002788", quantity: 1200, prices: ["15.98"] },
-  { date: "2026-02-06", action: "buy", stockZh: "鹭燕医药", stockEn: "Luyan Pharma", code: "002788", quantity: 1000, prices: ["16.52"] },
-  { date: "2026-03-03", action: "buy", stockZh: "五洲新春", stockEn: "Wuzhou New Spring", code: "603667", quantity: 200, prices: ["74.45"] },
-  { date: "2026-03-03", action: "sell", stockZh: "鹭燕医药", stockEn: "Luyan Pharma", code: "002788", quantity: 2400, prices: ["14.98"] },
-  { date: "2026-03-03", action: "sell", stockZh: "南京熊猫", stockEn: "Nanjing Panda", code: "600775", quantity: 2800, prices: ["13.99"] },
-  { date: "2026-03-06", action: "sell", stockZh: "鹭燕医药", stockEn: "Luyan Pharma", code: "002788", quantity: 1200, prices: ["15.03"] },
-  { date: "2026-03-10", action: "buy", stockZh: "工业富联", stockEn: "Foxconn Industrial Internet", code: "601138", quantity: 400, prices: ["53.93"] },
-  { date: "2026-03-10", action: "sell", stockZh: "鹭燕医药", stockEn: "Luyan Pharma", code: "002788", quantity: 1300, prices: ["15.03"] },
-  { date: "2026-03-10", action: "sell", stockZh: "五洲新春", stockEn: "Wuzhou New Spring", code: "603667", quantity: 200, prices: ["76.47"] },
-  { date: "2026-03-17", action: "buy", stockZh: "五洲新春", stockEn: "Wuzhou New Spring", code: "603667", quantity: 300, prices: ["71.43"] }
+  { date: "2026-03-10", action: "buy", stockZh: "工业富联", stockEn: "Foxconn Industrial Internet", code: "601138", quantity: 400, prices: ["53.93"] }
 ];
 
-const chartAnchors = [
-  { date: "2024-03-20", index: -1.5, total: 0.1, stock: 1.0 },
-  { date: "2024-04-08", index: 0.8, total: 0.8, stock: 8.0 },
-  { date: "2024-05-03", index: 0.75, total: 0.36, stock: 8.79 },
-  { date: "2024-06-09", index: -2.0, total: -4.0, stock: -6.0 },
-  { date: "2024-07-02", index: -5.0, total: -12.0, stock: -18.0 },
-  { date: "2024-07-31", index: -8.0, total: -20.0, stock: -24.0 },
-  { date: "2024-08-29", index: -10.0, total: -21.0, stock: -21.0 },
-  { date: "2024-09-12", index: 10.0, total: 12.0, stock: 18.0 },
-  { date: "2024-10-07", index: 14.0, total: 36.0, stock: 40.0 },
-  { date: "2024-10-21", index: 8.0, total: 33.0, stock: 37.0 },
-  { date: "2024-11-18", index: 11.0, total: 48.0, stock: 61.0 },
-  { date: "2024-12-12", index: 10.0, total: 44.0, stock: 45.0 },
-  { date: "2025-02-07", index: 12.0, total: 52.0, stock: 61.0 },
-  { date: "2025-03-10", index: 4.0, total: 6.0, stock: 10.0 },
-  { date: "2025-04-29", index: 7.0, total: 8.0, stock: 18.0 },
-  { date: "2025-05-22", index: 8.0, total: 18.0, stock: 35.0 },
-  { date: "2025-07-10", index: 18.0, total: 38.0, stock: 68.0 },
-  { date: "2025-08-18", index: 26.0, total: 61.0, stock: 98.0 },
-  { date: "2025-09-18", index: 29.0, total: 63.0, stock: 70.0 },
-  { date: "2025-10-10", index: 24.0, total: 42.0, stock: 55.0 },
-  { date: "2025-11-15", index: 31.0, total: 49.0, stock: 64.0 },
-  { date: "2025-12-18", index: 30.5, total: 14.0, stock: 20.0 },
-  { date: "2026-01-16", index: 30.0, total: 10.0, stock: 12.0 },
-  { date: "2026-02-20", index: 30.6, total: 8.4, stock: 9.2 },
-  { date: "2026-03-19", index: 28.11, total: 6.44, stock: 6.97 }
-];
+const seriesControlPoints = {
+  index: [
+    ["2024-03-20", -2.0],
+    ["2024-05-03", 0.75],
+    ["2024-06-09", -1.6],
+    ["2024-08-29", -10.2],
+    ["2024-09-18", 10.0],
+    ["2024-10-18", 14.0],
+    ["2024-11-05", 8.0],
+    ["2024-11-18", 10.0],
+    ["2024-12-16", 5.0],
+    ["2025-02-07", 10.0],
+    ["2025-04-29", 4.0],
+    ["2025-07-19", 12.0],
+    ["2025-09-18", 26.0],
+    ["2025-10-12", 29.0],
+    ["2025-11-15", 24.0],
+    ["2025-12-15", 31.0],
+    ["2026-01-16", 30.0],
+    ["2026-03-19", 28.11]
+  ],
+  total: [
+    ["2024-03-20", 0.0],
+    ["2024-05-03", 0.36],
+    ["2024-06-09", -4.0],
+    ["2024-08-29", -21.0],
+    ["2024-09-18", 12.0],
+    ["2024-10-07", 36.0],
+    ["2024-10-25", 33.0],
+    ["2024-11-20", 48.0],
+    ["2024-12-12", 44.0],
+    ["2025-02-07", 52.0],
+    ["2025-03-28", 44.0],
+    ["2025-04-10", 2.0],
+    ["2025-05-22", 8.0],
+    ["2025-07-19", 22.0],
+    ["2025-08-28", 61.0],
+    ["2025-10-08", 63.0],
+    ["2025-10-30", 42.0],
+    ["2025-11-30", 50.0],
+    ["2025-12-28", 49.0],
+    ["2026-01-16", 14.0],
+    ["2026-03-19", 6.44]
+  ],
+  stock: [
+    ["2024-03-20", 1.0],
+    ["2024-04-15", 8.0],
+    ["2024-05-03", 8.79],
+    ["2024-06-09", -6.0],
+    ["2024-07-08", -19.0],
+    ["2024-08-29", -21.0],
+    ["2024-09-10", 34.0],
+    ["2024-10-07", 40.0],
+    ["2024-10-25", 37.0],
+    ["2024-11-20", 48.0],
+    ["2024-12-12", 40.0],
+    ["2025-02-07", 61.0],
+    ["2025-03-25", 44.0],
+    ["2025-04-10", 1.0],
+    ["2025-05-22", 18.0],
+    ["2025-07-19", 35.0],
+    ["2025-08-28", 82.0],
+    ["2025-09-18", 98.0],
+    ["2025-10-08", 55.0],
+    ["2025-10-20", 72.0],
+    ["2025-11-15", 56.0],
+    ["2025-12-15", 64.0],
+    ["2025-12-28", 20.0],
+    ["2026-01-16", 12.0],
+    ["2026-03-19", 6.97]
+  ]
+};
 
 const xTickDates = [
   "2024-03-20",
@@ -215,6 +247,11 @@ const formatTrade = (trade, lang) => {
   return `${trade.date} ${trade.action === "buy" ? "Bought" : "Sold"} ${trade.stockEn} (${trade.code}) ${trade.quantity} shares at ${prices}`;
 };
 
+const seededNoise = (seed) => {
+  const raw = Math.sin(seed * 12.9898 + 78.233) * 43758.5453;
+  return raw - Math.floor(raw);
+};
+
 const tradeRecords = tradeCatalog.reduce((records, trade) => {
   if (!records[trade.date]) {
     records[trade.date] = [];
@@ -226,14 +263,6 @@ const tradeRecords = tradeCatalog.reduce((records, trade) => {
 const chartStart = parseDate("2024-03-20");
 const chartEnd = parseDate("2026-03-19");
 const totalSpan = chartEnd.getTime() - chartStart.getTime();
-const anchors = chartAnchors
-  .map((point) => ({ ...point, time: parseDate(point.date).getTime() }))
-  .sort((a, b) => a.time - b.time);
-
-const seededNoise = (seed) => {
-  const raw = Math.sin(seed * 12.9898 + 78.233) * 43758.5453;
-  return raw - Math.floor(raw);
-};
 
 const generateTradingDays = (start, end) => {
   const dates = [];
@@ -250,27 +279,33 @@ const generateTradingDays = (start, end) => {
 const tradingDates = generateTradingDays(chartStart, chartEnd);
 
 const buildSeriesValues = (seriesName) => {
+  const controls = seriesControlPoints[seriesName].map(([date, value]) => ({
+    date,
+    value,
+    time: parseDate(date).getTime()
+  }));
   const values = new Map();
-  const seriesOffset = { index: 17, total: 43, stock: 79 }[seriesName];
+  const volatilitySeed = { index: 11, total: 37, stock: 73 }[seriesName];
+  const volatilityBase = { index: 0.55, total: 1.05, stock: 1.55 }[seriesName];
+  const quantizeStep = { index: 0.08, total: 0.14, stock: 0.18 }[seriesName];
 
-  for (let segmentIndex = 0; segmentIndex < anchors.length - 1; segmentIndex += 1) {
-    const current = anchors[segmentIndex];
-    const next = anchors[segmentIndex + 1];
+  for (let segmentIndex = 0; segmentIndex < controls.length - 1; segmentIndex += 1) {
+    const current = controls[segmentIndex];
+    const next = controls[segmentIndex + 1];
     const segmentDates = tradingDates.filter((date) => date >= current.date && date <= next.date);
+    const steps = segmentDates.length - 1;
     if (!segmentDates.length) {
       continue;
     }
 
-    const startValue = current[seriesName];
-    const endValue = next[seriesName];
-    const steps = segmentDates.length - 1;
     const walk = new Array(segmentDates.length).fill(0);
     let cumulative = 0;
-    const volatilityBase = { index: 0.32, total: 0.58, stock: 0.92 }[seriesName];
-    const volatility = Math.min(volatilityBase + Math.abs(endValue - startValue) * 0.014, volatilityBase * 3.1);
+    const delta = Math.abs(next.value - current.value);
+    const volatility = volatilityBase + delta * 0.025;
 
     for (let index = 1; index < segmentDates.length; index += 1) {
-      cumulative += (seededNoise(seriesOffset * 1000 + segmentIndex * 131 + index * 17) - 0.5) * volatility;
+      const noise = seededNoise(volatilitySeed * 1000 + segmentIndex * 97 + index * 31) - 0.5;
+      cumulative += noise * volatility;
       walk[index] = cumulative;
     }
 
@@ -278,13 +313,18 @@ const buildSeriesValues = (seriesName) => {
 
     segmentDates.forEach((date, index) => {
       const ratio = steps === 0 ? 0 : index / steps;
-      const linear = startValue + (endValue - startValue) * ratio;
+      const base = current.value + (next.value - current.value) * ratio;
       const bridge = walk[index] - finalOffset * ratio;
       const envelope = Math.sin(Math.PI * ratio);
-      const value = Number((linear + bridge * envelope).toFixed(2));
-      values.set(date, value);
+      const stepped = base + bridge * envelope;
+      const quantized = Math.round(stepped / quantizeStep) * quantizeStep;
+      values.set(date, Number(quantized.toFixed(2)));
     });
   }
+
+  controls.forEach((point) => {
+    values.set(point.date, point.value);
+  });
 
   return values;
 };

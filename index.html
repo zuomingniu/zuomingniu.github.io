@@ -80,6 +80,7 @@
         <div class="finance-card">
           <div class="finance-head">
             <h3 data-i18n="chart_title">Two-Year Return Comparison</h3>
+            <a class="finance-link" href="#contact" data-i18n="chart_link">My holdings</a>
           </div>
           <div class="finance-legend" id="finance-legend">
             <div class="legend-item legend-index">
@@ -131,6 +132,42 @@
               <path id="stock-line" class="chart-line chart-line-stock"></path>
               <line id="hover-line" class="hover-line" x1="0" y1="0" x2="0" y2="0" hidden></line>
             </svg>
+          </div>
+
+          <div class="finance-tabs" aria-hidden="true">
+            <button class="finance-tab" type="button" data-i18n="tab_month">1M</button>
+            <button class="finance-tab" type="button" data-i18n="tab_year">YTD</button>
+            <button class="finance-tab" type="button" data-i18n="tab_half">6M</button>
+            <button class="finance-tab is-active" type="button" data-i18n="tab_two_year">2Y</button>
+            <button class="finance-tab" type="button" data-i18n="tab_custom">Custom</button>
+          </div>
+
+          <div class="finance-summary">
+            <div class="summary-item summary-item-index">
+              <span class="summary-bullet"></span>
+              <span data-i18n="summary_index_label">CSI 300</span>
+              <strong data-i18n="summary_index_value">-- +28.11%</strong>
+            </div>
+            <div class="summary-item summary-item-total">
+              <span class="summary-bullet"></span>
+              <span data-i18n="summary_total_label">Total Return</span>
+              <strong data-i18n="summary_total_value">+10,074.37 +6.44%</strong>
+            </div>
+            <div class="summary-item summary-item-stock">
+              <span class="summary-ring"></span>
+              <span data-i18n="summary_stock_label">Stocks</span>
+              <strong data-i18n="summary_stock_value">+9,878.14 +6.97%</strong>
+            </div>
+            <div class="summary-item summary-item-cash">
+              <span class="summary-ring summary-ring-muted"></span>
+              <span data-i18n="summary_cash_label">Cash</span>
+              <strong data-i18n="summary_cash_value">+55.80 +0.18%</strong>
+            </div>
+            <div class="summary-item summary-item-bond">
+              <span class="summary-ring summary-ring-muted"></span>
+              <span data-i18n="summary_bond_label">Bonds</span>
+              <strong data-i18n="summary_bond_value">+140.43 +0.10%</strong>
+            </div>
           </div>
         </div>
       </article>
