@@ -9,7 +9,7 @@ const translations = {
     about_p1:
       "Hi! I'm Zuoming Niu, an undergraduate student in Computer Science at Xi'an Jiaotong University, advised by Professor Minnan Luo.",
     about_p2:
-      "My research interests lie in sociotechnical safety and trustworthy AI. I work on developing fact-checking systems, and on advancing how large language models perform on fact-checking tasks.",
+      "My research interests lie in sociotechnical safety and trustworthy AI. I work on developing fact-checking systems and advancing large language models for fact-checking.",
     about_p3:
       "Beyond research, I am also interested in securities trading and photography.",
     finance_title: "Finance",
@@ -53,7 +53,7 @@ const translations = {
     about_p1:
       "\u4f60\u597d\uff01\u6211\u662f\u725b\u4f5c\u94ed\uff0c\u662f\u897f\u5b89\u4ea4\u901a\u5927\u5b66\u8ba1\u7b97\u673a\u79d1\u5b66\u4e13\u4e1a\u7684\u672c\u79d1\u751f\uff0c\u5bfc\u5e08\u662f\u7f57\u654f\u6960\u6559\u6388\u3002",
     about_p2:
-      "\u6211\u7684\u7814\u7a76\u5174\u8da3\u4e3b\u8981\u96c6\u4e2d\u5728\u793e\u4f1a\u6280\u672f\u5b89\u5168\u4e0e\u53ef\u4fe1\u4eba\u5de5\u667a\u80fd\u3002\u6211\u5173\u6ce8\u4e8b\u5b9e\u6838\u67e5\u7cfb\u7edf\u7684\u5f00\u53d1\uff0c\u4e5f\u5e0c\u671b\u63d0\u5347\u5927\u8bed\u8a00\u6a21\u578b\u5728\u4e8b\u5b9e\u6838\u67e5\u4efb\u52a1\u4e2d\u7684\u8868\u73b0\u3002",
+      "\u6211\u7684\u7814\u7a76\u5174\u8da3\u4e3b\u8981\u96c6\u4e2d\u5728\u793e\u4f1a\u6280\u672f\u5b89\u5168\u4e0e\u53ef\u4fe1\u4eba\u5de5\u667a\u80fd\u3002\u6211\u5173\u6ce8\u4e8b\u5b9e\u6838\u67e5\u7cfb\u7edf\u7684\u5f00\u53d1\uff0c\u4e5f\u81f4\u529b\u4e8e\u63d0\u5347\u5927\u8bed\u8a00\u6a21\u578b\u5728\u4e8b\u5b9e\u6838\u67e5\u4efb\u52a1\u4e2d\u7684\u8868\u73b0\u3002",
     about_p3:
       "\u6b64\u5916\uff0c\u6211\u4e5f\u5bf9\u8bc1\u5238\u4ea4\u6613\u548c\u6444\u5f71\u5f88\u611f\u5174\u8da3\u3002",
     finance_title: "\u91d1\u878d",
