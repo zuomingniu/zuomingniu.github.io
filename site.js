@@ -9,7 +9,7 @@ const translations = {
     about_p1:
       "Hi! I'm Zuoming Niu, an undergraduate student in Computer Science at Xi'an Jiaotong University, advised by Professor Minnan Luo.",
     about_p2:
-      "My research interests lie in sociotechnical safety and trustworthy AI. I work on building and evaluating fact-checking systems, and on understanding and improving how large language models perform on fact-checking tasks.",
+      "My research interests lie in sociotechnical safety and trustworthy AI. I work on developing fact-checking systems, and on advancing how large language models perform on fact-checking tasks.",
     about_p3:
       "Beyond research, I am also interested in securities trading and photography.",
     finance_title: "Finance",
