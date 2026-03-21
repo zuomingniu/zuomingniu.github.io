@@ -267,7 +267,7 @@ const setSummaryValues = () => {
   }
 };
 
-const setTooltip = (point, index, rect) => {
+const setTooltip = (point, index, rect, pointerY = null) => {
   const { width, height } = getChartSize();
   const x = getXForIndex(index, width);
   const scaledX = (x / width) * rect.width;
@@ -290,13 +290,21 @@ const setTooltip = (point, index, rect) => {
     chartRefs.tooltipTradesList.appendChild(li);
   });
 
-  const tooltipWidth = 340;
-  const left = Math.min(
-    Math.max(scaledX + 16, 14),
-    rect.width - tooltipWidth - 14
-  );
+  const tooltipWidth = 278;
+  const preferredLeft = scaledX + 14;
+  const fallbackLeft = scaledX - tooltipWidth - 14;
+  const left = preferredLeft + tooltipWidth <= rect.width - 10
+    ? preferredLeft
+    : Math.max(10, fallbackLeft);
+  const tooltipHeight = chartRefs.tooltip.offsetHeight || 160;
+  const cursorY = pointerY === null ? rect.height * 0.28 : pointerY;
+  const wantsAbove = cursorY > rect.height * 0.56;
+  const top = wantsAbove
+    ? Math.max(12, cursorY - tooltipHeight - 16)
+    : Math.min(rect.height - tooltipHeight - 12, cursorY + 16);
+
   chartRefs.tooltip.style.left = `${left}px`;
-  chartRefs.tooltip.style.top = "18px";
+  chartRefs.tooltip.style.top = `${top}px`;
 
   chartRefs.hoverLine.hidden = false;
   chartRefs.hoverLine.setAttribute("x1", x);
@@ -314,6 +322,7 @@ const hideTooltip = () => {
 const updateHover = (event) => {
   const rect = chartRefs.svg.getBoundingClientRect();
   const { width } = getChartSize();
+  const pointerY = event.clientY - rect.top;
   const relativeX = ((event.clientX - rect.left) / rect.width) * width;
   const clamped = Math.min(
     Math.max(relativeX - chartState.margin.left, 0),
@@ -322,7 +331,7 @@ const updateHover = (event) => {
   const ratio = clamped / getInnerWidth(width);
   const index = Math.round(ratio * (chartState.data.points.length - 1));
   chartState.hoverIndex = index;
-  setTooltip(chartState.data.points[index], index, rect);
+  setTooltip(chartState.data.points[index], index, rect, pointerY);
 };
 
 const renderChart = () => {
