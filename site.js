@@ -7,14 +7,14 @@ const translations = {
     eyebrow: "About",
     hero_name: "Zuoming Niu",
     about_p1:
-      "I am currently an undergraduate student in Computer Science and Technology (Experimental Class for Integrated Circuits) at Xi'an Jiaotong University, and expect to graduate in July 2026.",
+      "Hi! I'm Zuoming Niu, an undergraduate student in Computer Science at Xi'an Jiaotong University, advised by Professor Minnan Luo.",
     about_p2:
-      'From May to July 2025, I joined the NUS School of Computing Workshop and worked on federated learning security. During the workshop, I contributed to the paper "FL Breaker: Demonstrating Security Weaknesses of Federated Learning."',
+      "My research interests lie in sociotechnical safety and trustworthy AI. I work on building and evaluating fact-checking systems, and on understanding and improving how large language models perform on fact-checking tasks.",
     about_p3:
-      "Beyond formal coursework, I keep a steady interest in finance and photography. Finance keeps me attentive to markets and information, while photography gives me a way to observe light, places, and everyday details with patience.",
+      "Beyond research, I am also interested in securities trading and photography.",
     finance_title: "Finance",
     finance_body:
-      "Looking back at the desolate place I came from, I return, and there is neither wind nor rain nor sunshine.",
+      "If I look back, I'm lost.",
     chart_title: "Securities Investment",
     chart_link: "My holdings \u203a",
     legend_index: "CSI 300",
@@ -51,11 +51,11 @@ const translations = {
     eyebrow: "\u5173\u4e8e",
     hero_name: "\u725b\u4f5c\u94ed",
     about_p1:
-      "\u6211\u76ee\u524d\u5c31\u8bfb\u4e8e\u897f\u5b89\u4ea4\u901a\u5927\u5b66\u96c6\u6210\u7535\u8def\u5b9e\u9a8c\u73ed\uff0c\u9884\u8ba1\u4e8e 2026 \u5e74 7 \u6708\u6bd5\u4e1a\u3002",
+      "\u4f60\u597d\uff01\u6211\u662f\u725b\u4f5c\u94ed\uff0c\u662f\u897f\u5b89\u4ea4\u901a\u5927\u5b66\u8ba1\u7b97\u673a\u79d1\u5b66\u4e13\u4e1a\u7684\u672c\u79d1\u751f\uff0c\u5bfc\u5e08\u662f\u7f57\u654f\u6960\u6559\u6388\u3002",
     about_p2:
-      "2025 \u5e74 5 \u6708\u81f3 7 \u6708\uff0c\u6211\u53c2\u52a0\u4e86 NUS School of Computing Workshop\uff0c\u56f4\u7ed5\u8054\u90a6\u5b66\u4e60\u5b89\u5168\u5f00\u5c55\u7814\u7a76\uff0c\u5e76\u53c2\u4e0e\u8bba\u6587\u300aFL Breaker: Demonstrating Security Weaknesses of Federated Learning.\u300b\u7684\u5199\u4f5c\u3002",
+      "\u6211\u7684\u7814\u7a76\u5174\u8da3\u4e3b\u8981\u5728\u793e\u4f1a\u6280\u672f\u5b89\u5168\u4e0e\u53ef\u4fe1\u4eba\u5de5\u667a\u80fd\u3002\u6211\u5173\u6ce8\u4e8b\u5b9e\u6838\u67e5\u7cfb\u7edf\u7684\u6784\u5efa\u4e0e\u8bc4\u4f30\uff0c\u4e5f\u5206\u6790\u5e76\u63d0\u5347\u5927\u8bed\u8a00\u6a21\u578b\u5728\u4e8b\u5b9e\u6838\u67e5\u4efb\u52a1\u4e2d\u7684\u5177\u4f53\u8868\u73b0\u3002",
     about_p3:
-      "\u9664\u6b63\u5f0f\u8bfe\u7a0b\u4e4b\u5916\uff0c\u6211\u4e5f\u6301\u7eed\u5173\u6ce8\u91d1\u878d\u4e0e\u6444\u5f71\u3002\u91d1\u878d\u8ba9\u6211\u4fdd\u6301\u5bf9\u5e02\u573a\u4e0e\u4fe1\u606f\u7684\u654f\u611f\uff0c\u6444\u5f71\u5219\u8ba9\u6211\u66f4\u8010\u5fc3\u5730\u89c2\u5bdf\u5149\u7ebf\u3001\u573a\u666f\u4e0e\u65e5\u5e38\u7ec6\u8282\u3002",
+      "\u6b64\u5916\uff0c\u6211\u4e5f\u5bf9\u8bc1\u5238\u4ea4\u6613\u548c\u6444\u5f71\u5f88\u611f\u5174\u8da3\u3002",
     finance_title: "\u91d1\u878d",
     finance_body:
       "\u56de\u9996\u5411\u6765\u8427\u745f\u5904\uff0c\u5f52\u53bb\uff0c\u4e5f\u65e0\u98ce\u96e8\u4e5f\u65e0\u6674\u3002",
