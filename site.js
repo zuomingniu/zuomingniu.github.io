@@ -14,8 +14,8 @@ const translations = {
       "Beyond formal coursework, I keep a steady interest in finance and photography. Finance keeps me attentive to markets and information, while photography gives me a way to observe light, places, and everyday details with patience.",
     finance_title: "Finance",
     finance_body:
-      "An interactive reconstruction of my two-year return curve using daily chart data and brokerage records. Hover to inspect values and trades by date.",
-    chart_title: "Two-Year Return Comparison",
+      "Looking back at the desolate place I came from, I return, and there is neither wind nor rain nor sunshine.",
+    chart_title: "Securities Investment",
     chart_link: "My holdings \u203a",
     legend_index: "CSI 300",
     legend_total: "Total Return",
@@ -58,8 +58,8 @@ const translations = {
       "\u9664\u6b63\u5f0f\u8bfe\u7a0b\u4e4b\u5916\uff0c\u6211\u4e5f\u6301\u7eed\u5173\u6ce8\u91d1\u878d\u4e0e\u6444\u5f71\u3002\u91d1\u878d\u8ba9\u6211\u4fdd\u6301\u5bf9\u5e02\u573a\u4e0e\u4fe1\u606f\u7684\u654f\u611f\uff0c\u6444\u5f71\u5219\u8ba9\u6211\u66f4\u8010\u5fc3\u5730\u89c2\u5bdf\u5149\u7ebf\u3001\u573a\u666f\u4e0e\u65e5\u5e38\u7ec6\u8282\u3002",
     finance_title: "\u91d1\u878d",
     finance_body:
-      "\u8fd9\u91cc\u5c55\u793a\u6839\u636e\u6bcf\u65e5\u56fe\u8868\u6570\u636e\u4e0e\u5bf9\u8d26\u5355\u91cd\u5efa\u7684\u8fd1\u4e24\u5e74\u6536\u76ca\u66f2\u7ebf\uff0c\u9f20\u6807\u60ac\u505c\u65f6\u53ef\u4ee5\u67e5\u770b\u5f53\u65e5\u6570\u503c\u4e0e\u6210\u4ea4\u660e\u7ec6\u3002",
-    chart_title: "\u8fd1\u4e24\u5e74\u6536\u76ca\u5bf9\u6bd4",
+      "\u56de\u9996\u5411\u6765\u8427\u745f\u5904\uff0c\u5f52\u53bb\uff0c\u4e5f\u65e0\u98ce\u96e8\u4e5f\u65e0\u6674\u3002",
+    chart_title: "\u8bc1\u5238\u6295\u8d44",
     chart_link: "\u6211\u7684\u80a1\u7968 \u203a",
     legend_index: "\u6caa\u6df1300",
     legend_total: "\u603b\u6536\u76ca",
@@ -105,9 +105,6 @@ const chartRefs = {
   tooltipStock: document.getElementById("tooltip-stock"),
   tooltipTradesLabel: document.getElementById("tooltip-trades-label"),
   tooltipTradesList: document.getElementById("tooltip-trades-list"),
-  legendIndex: document.getElementById("legend-index-value"),
-  legendTotal: document.getElementById("legend-total-value"),
-  legendStock: document.getElementById("legend-stock-value"),
   summaryIndex: document.getElementById("summary-index-value"),
   summaryTotal: document.getElementById("summary-total-value"),
   summaryStock: document.getElementById("summary-stock-value"),
@@ -259,9 +256,6 @@ const renderGrid = (width, height) => {
 };
 
 const setSummaryValues = () => {
-  chartRefs.legendIndex.textContent = chartState.data.legend.index;
-  chartRefs.legendTotal.textContent = chartState.data.legend.total;
-  chartRefs.legendStock.textContent = chartState.data.legend.stock;
   chartRefs.summaryIndex.textContent = chartState.data.summary.index;
   chartRefs.summaryTotal.textContent = chartState.data.summary.total;
   chartRefs.summaryStock.textContent = chartState.data.summary.stock;
