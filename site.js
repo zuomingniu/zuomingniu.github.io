@@ -14,6 +14,8 @@ const translations = {
     finance_title: "Finance",
     finance_body:
       "If I look back, I'm lost.",
+    quant_title: "Quantitative Trading",
+    quant_range: "2026.04.07 - 2027",
     chart_title: "Securities Investment",
     chart_link: "My holdings \u203a",
     legend_index: "CSI 300",
@@ -31,6 +33,7 @@ const translations = {
     summary_bond_label: "Bonds",
     tooltip_trades: "Trades",
     tooltip_no_trades: "No stock trade on this date.",
+    coming_soon: "Coming Soon",
     photo_title: "Photography",
     photo_body: "A record of me and my world.",
     photo_caption_1_title: "Xinghai Square, Dalian",
@@ -56,6 +59,8 @@ const translations = {
     finance_title: "\u91d1\u878d",
     finance_body:
       "\u56de\u9996\u5411\u6765\u8427\u745f\u5904\uff0c\u5f52\u53bb\uff0c\u4e5f\u65e0\u98ce\u96e8\u4e5f\u65e0\u6674\u3002",
+    quant_title: "\u91cf\u5316\u4ea4\u6613",
+    quant_range: "2026.04.07 - 2027",
     chart_title: "\u8bc1\u5238\u6295\u8d44",
     chart_link: "\u6211\u7684\u80a1\u7968 \u203a",
     legend_index: "\u6caa\u6df1300",
@@ -73,6 +78,7 @@ const translations = {
     summary_bond_label: "\u503a\u5238",
     tooltip_trades: "\u6210\u4ea4\u660e\u7ec6",
     tooltip_no_trades: "\u5f53\u65e5\u6682\u65e0\u80a1\u7968\u4e70\u5356\u8bb0\u5f55\u3002",
+    coming_soon: "\u5373\u5c06\u4e0a\u7ebf",
     photo_title: "\u6444\u5f71",
     photo_body: "\u8bb0\u5f55\u6211\u548c\u6211\u7684\u4e16\u754c",
     photo_caption_1_title: "\u5927\u8fde\u661f\u6d77\u5e7f\u573a",

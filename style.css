@@ -276,10 +276,21 @@ button {
   margin-bottom: 18px;
 }
 
+.finance-head-stack {
+  align-items: flex-start;
+}
+
 .finance-head h3 {
   margin: 0;
   font-size: 1.22rem;
   color: #3f68b1;
+}
+
+.finance-range {
+  margin: 8px 0 0;
+  color: #8e8897;
+  font-size: 0.92rem;
+  font-weight: 700;
 }
 
 .finance-link {
@@ -333,6 +344,71 @@ button {
 
 .chart-shell {
   position: relative;
+}
+
+.quant-chart {
+  position: relative;
+  min-height: 430px;
+  border-radius: 20px;
+  border: 1px solid rgba(117, 103, 126, 0.12);
+  background:
+    linear-gradient(rgba(117, 103, 126, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(117, 103, 126, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(250, 247, 244, 0.48));
+  background-size: 100% 25%, 12.5% 100%, auto;
+  overflow: hidden;
+}
+
+.quant-chart::before {
+  content: "";
+  position: absolute;
+  left: 58px;
+  right: 18px;
+  top: 24px;
+  bottom: 42px;
+  border-left: 1.35px solid rgba(73, 70, 82, 0.72);
+  border-bottom: 1.35px solid rgba(73, 70, 82, 0.72);
+  pointer-events: none;
+}
+
+.quant-chart-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c7c3cc;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.quant-axis {
+  position: absolute;
+  color: #aaa4b1;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.quant-axis-y {
+  top: 18px;
+  left: 0;
+  bottom: 46px;
+  width: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.quant-axis-x {
+  left: 58px;
+  right: 18px;
+  bottom: 12px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .finance-chart {
@@ -638,6 +714,10 @@ button {
 
   .hero-heading {
     align-items: flex-start;
+  }
+
+  .quant-chart {
+    min-height: 320px;
   }
 
 }
