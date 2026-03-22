@@ -6,7 +6,7 @@
   <title>Zuoming Niu</title>
   <meta
     name="description"
-    content="Personal website of Zuoming Niu, with sections on about, finance, photography, and contact."
+    content="Personal website of Zuoming Niu, with sections on about, finance, and photography."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,7 +35,6 @@
           <a href="#about" data-i18n="nav_about">About</a>
           <a href="#finance" data-i18n="nav_finance">Finance</a>
           <a href="#photography" data-i18n="nav_photography">Photography</a>
-          <a href="#contact" data-i18n="nav_contact">Contact</a>
         </nav>
         <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
       </div>
@@ -46,7 +45,20 @@
     <section id="about" class="hero container">
       <div class="hero-copy glass-card">
         <p class="eyebrow" data-i18n="eyebrow">About</p>
-        <h1 data-i18n="hero_name">Zuoming Niu</h1>
+        <div class="hero-heading">
+          <h1 data-i18n="hero_name">Zuoming Niu</h1>
+          <a
+            class="hero-mail"
+            href="mailto:Niuzuoming@outlook.com"
+            aria-label="Email Zuoming Niu"
+            title="Niuzuoming@outlook.com"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3.75 6.75h16.5a1.5 1.5 0 0 1 1.5 1.5v7.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25v-7.5a1.5 1.5 0 0 1 1.5-1.5Z" />
+              <path d="m4.5 8.25 7.5 5.25 7.5-5.25" />
+            </svg>
+          </a>
+        </div>
         <div class="hero-prose">
           <p data-i18n="about_p1">
             I am currently an undergraduate student in Computer Science and Technology
@@ -193,18 +205,6 @@
               <span data-i18n="photo_caption_2_meta">May 26, 2024</span>
             </figcaption>
           </figure>
-        </div>
-      </article>
-    </section>
-
-    <section id="contact" class="section container">
-      <article class="glass-card contact-card">
-        <div>
-          <h2 data-i18n="contact_title">Contact</h2>
-        </div>
-        <div class="contact-links">
-          <a href="mailto:Niuzuoming@outlook.com">Niuzuoming@outlook.com</a>
-          <a href="https://www.linkedin.com/in/zuomingniu" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </article>
     </section>

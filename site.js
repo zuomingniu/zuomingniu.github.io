@@ -3,7 +3,6 @@ const translations = {
     nav_about: "About",
     nav_finance: "Finance",
     nav_photography: "Photography",
-    nav_contact: "Contact",
     eyebrow: "About",
     hero_name: "Zuoming Niu",
     about_p1:
@@ -38,16 +37,14 @@ const translations = {
     photo_caption_1_meta: "December 23, 2022",
     photo_caption_2_title: "XJTU Graduation Gala",
     photo_caption_2_meta: "May 26, 2024",
-    contact_title: "Contact",
     footer: "\u00a9 2026 Zuoming Niu",
     description:
-      "Personal website of Zuoming Niu, with sections on about, finance, photography, and contact."
+      "Personal website of Zuoming Niu, with sections on about, finance, and photography."
   },
   zh: {
     nav_about: "\u5173\u4e8e",
     nav_finance: "\u91d1\u878d",
     nav_photography: "\u6444\u5f71",
-    nav_contact: "\u8054\u7cfb",
     eyebrow: "\u5173\u4e8e",
     hero_name: "\u725b\u4f5c\u94ed",
     about_p1:
@@ -82,10 +79,9 @@ const translations = {
     photo_caption_1_meta: "2022 \u5e74 12 \u6708 23 \u65e5",
     photo_caption_2_title: "\u4ea4\u5927\u6bd5\u4e1a\u665a\u4f1a",
     photo_caption_2_meta: "2024 \u5e74 5 \u6708 26 \u65e5",
-    contact_title: "\u8054\u7cfb",
     footer: "\u00a9 2026 \u725b\u4f5c\u94ed",
     description:
-      "\u725b\u4f5c\u94ed\u7684\u4e2a\u4eba\u4e3b\u9875\uff0c\u5305\u542b\u5173\u4e8e\u6211\u3001\u91d1\u878d\u3001\u6444\u5f71\u4e0e\u8054\u7cfb\u4fe1\u606f\u3002"
+      "\u725b\u4f5c\u94ed\u7684\u4e2a\u4eba\u4e3b\u9875\uff0c\u5305\u542b\u5173\u4e8e\u6211\u3001\u91d1\u878d\u4e0e\u6444\u5f71\u5185\u5bb9\u3002"
   }
 };
 

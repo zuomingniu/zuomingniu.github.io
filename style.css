@@ -126,7 +126,7 @@ button {
 }
 
 .nav a:hover,
-.contact-links a:hover,
+.hero-mail:hover,
 .lang-toggle:hover {
   color: var(--text);
 }
@@ -162,8 +162,7 @@ button {
 
 .hero-copy,
 .hero-panel,
-.section-card,
-.contact-card {
+.section-card {
   padding: 28px;
 }
 
@@ -178,14 +177,50 @@ button {
 }
 
 .hero h1,
-.section-card h2,
-.contact-card h2 {
+.section-card h2 {
   margin: 0;
   line-height: 1.08;
 }
 
+.hero-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
 .hero h1 {
   font-size: clamp(2rem, 4vw, 3.1rem);
+}
+
+.hero-mail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border-radius: 50%;
+  color: #74596a;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 24px rgba(162, 149, 167, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.hero-mail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(162, 149, 167, 0.16);
+}
+
+.hero-mail svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .hero-prose {
@@ -194,7 +229,6 @@ button {
 
 .hero-prose p,
 .section-card p,
-.contact-links,
 .footer-inner {
   color: var(--muted);
 }
@@ -540,20 +574,6 @@ button {
   color: rgba(255, 255, 255, 0.82);
 }
 
-.contact-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 20px;
-}
-
-.contact-links {
-  display: grid;
-  gap: 10px;
-  justify-items: start;
-  font-weight: 700;
-}
-
 .site-footer {
   padding: 24px 0 36px;
 }
@@ -565,11 +585,8 @@ button {
 }
 
 @media (max-width: 900px) {
-  .hero,
-  .contact-card {
+  .hero {
     grid-template-columns: 1fr;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .brand-logo {
@@ -603,8 +620,7 @@ button {
 
   .hero-copy,
   .hero-panel,
-  .section-card,
-  .contact-card {
+  .section-card {
     padding: 22px;
     border-radius: 24px;
   }
@@ -617,6 +633,10 @@ button {
   .nav-wrap,
   .nav-tools {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-heading {
     align-items: flex-start;
   }
 
