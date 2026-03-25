@@ -280,9 +280,12 @@ button {
 
 .hero-panel {
   align-self: flex-start;
+  justify-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: fit-content;
+  max-width: 100%;
   padding: 28px;
 }
 
