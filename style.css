@@ -281,13 +281,13 @@ button {
 .hero-panel {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
+  align-items: flex-start;
+  padding: 28px;
 }
 
 .avatar {
-  width: 100%;
-  max-width: 100%;
+  width: min(100%, 340px);
+  max-width: 340px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center 26%;
@@ -714,7 +714,7 @@ button {
   }
 
   .hero-panel {
-    padding: 20px;
+    padding: 22px;
   }
 
   .avatar {
