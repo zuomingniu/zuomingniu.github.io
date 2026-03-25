@@ -180,6 +180,12 @@ button {
   gap: 0;
   align-items: stretch;
   padding: 64px 0 24px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.52));
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
 }
 
 .glass-card {
@@ -194,6 +200,14 @@ button {
 .hero-panel,
 .section-card {
   padding: 28px;
+}
+
+.hero > .glass-card {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .eyebrow,
@@ -284,13 +298,11 @@ button {
   align-self: stretch;
   justify-self: stretch;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   max-width: none;
-  padding: 28px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  padding: 28px 28px 28px 0;
 }
 
 .avatar {
